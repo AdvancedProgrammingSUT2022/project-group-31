@@ -13,7 +13,7 @@ public class UserController {
 
         if (User.getUserByUserName(username)!=null && User.getUsernameAndPasswordByUsernameAndPassword(username,password)!=null){
             System.out.println("user logged in successfully!");
-            MainMenu.run();
+            MainMenu.run(User.getUserByUserName(username));
         }else
             System.out.println("Username or password didn't match!");
 
@@ -32,11 +32,34 @@ public class UserController {
             User user=new User(username,password,nickname);
             System.out.println("user created successfully!");
             User.users.add(user);
-
-
         }
-
     }
+
+    public static void changeNickname(Matcher matcher, User user){
+        String newNickName=matcher.group("newNickname");
+       if (User.getUserByNickName(newNickName)==null){
+           user.setNickname(newNickName);
+           System.out.println("nickname changed successfully to "+user.getNickname());
+       }else {
+           System.out.println("user with nickname " + newNickName + " already exists");
+       }
+    }
+
+    public static void changePassword(Matcher matcher, User user){
+        String newPassword=matcher.group("newPassword");
+        String currentPassword=matcher.group("currentPassword");
+        if (User.getUsernameAndPasswordByUsernameAndPassword(user.getUsername(),currentPassword)==null){
+            System.out.println("current password is invalid");
+        }
+       else if (newPassword.equals(currentPassword)){
+            System.out.println("please enter a new password");
+       }else{
+           user.setPassword(currentPassword);
+            System.out.println("password changed successfully");
+        }
+    }
+
+
 
 
 }

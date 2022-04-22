@@ -24,13 +24,14 @@ public class LoginMenu {
                 System.out.println("Login Menu");
 
             } else if ((matcher=Commands.getMatcher(input,Commands.MENU_EXIT)).find()){
-                break;
+                System.exit(0);
             } else {
                 System.out.println("INVALID MASSAGE");
 
             }
           }
        }
+
 
     }
 

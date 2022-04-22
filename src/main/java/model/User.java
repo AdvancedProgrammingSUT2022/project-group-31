@@ -47,4 +47,19 @@ return null;
         return null;
     }
 
+    public String getUsername() {
+        return this.username;
+    }
+
+    public String getNickname() {
+        return this.nickname;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    public void setNickname(String nickname) {
+        this.nickname = nickname;
+    }
 }
