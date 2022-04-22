@@ -1,6 +1,6 @@
 package view;
 
-public class ProfileMenu {
+public class PlayGameMenu {
     public static void run(){
 
     }

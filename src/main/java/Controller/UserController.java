@@ -13,8 +13,10 @@ public class UserController {
 
         if (User.getUserByUserName(username)!=null && User.getUsernameAndPasswordByUsernameAndPassword(username,password)!=null){
             System.out.println("user logged in successfully!");
+            MainMenu.run();
         }else
             System.out.println("Username or password didn't match!");
+
     }
 
     public static void signIn(Matcher matcher){
@@ -30,7 +32,6 @@ public class UserController {
             User user=new User(username,password,nickname);
             System.out.println("user created successfully!");
             User.users.add(user);
-            MainMenu.run();
 
 
         }
