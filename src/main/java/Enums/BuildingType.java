@@ -36,7 +36,6 @@ public enum BuildingType {
     HOSPITAL(400, 2, Technology.BIOLOGY, null),
     MILITARY_BASE(450, 4, Technology.TELEGRAPH, new BuildingType[]{CASTLE}),
     STOCK_EXCHANGE(650, 0, Technology.ELECTRICITY, new BuildingType[]{BANK}); //TODO
-
     private int cost;
     private int maintenance;
     private Technology neededTechnology;
