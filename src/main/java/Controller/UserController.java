@@ -1,6 +1,7 @@
 package Controller;
 
 import model.User;
+import view.MainMenu;
 
 import java.util.regex.Matcher;
 
@@ -29,6 +30,8 @@ public class UserController {
             User user=new User(username,password,nickname);
             System.out.println("user created successfully!");
             User.users.add(user);
+            MainMenu.run();
+
 
         }
 
