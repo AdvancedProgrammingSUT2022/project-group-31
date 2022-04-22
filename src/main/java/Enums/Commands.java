@@ -1,6 +1,5 @@
-package view;
+package Enums;
 
-import javax.xml.xpath.XPath;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
