@@ -7,7 +7,7 @@ public class User {
     String password;
     String nickname;
     int score;
-    public static ArrayList<User> users = new ArrayList<>();
+
 
     public User(String username, String password, String nickname) {
         this.username = username;
@@ -20,31 +20,41 @@ public class User {
 
 
 
-    public static User getUserByUserName(String username) {
-        for (User user : users) {
-            if (user.username.equals(username)) {
-                return user;
-            }
-        }
-return null;
+
+
+
+
+
+
+    public String getUsername() {
+        return username;
     }
 
-    public static User getUserByNickName(String nickname){
-        for (User user: users){
-            if (user.nickname.equals(nickname)){
-                return user;
-            }
-        }
-        return null;
+    public String getPassword() {
+        return password;
     }
 
-    public static User getUsernameAndPasswordByUsernameAndPassword(String username, String password){
-        for (User user:users) {
-            if (user.username.equals(username)&& user.password.equals(password)){
-                return user;
-            }
-        }
-        return null;
+    public String getNickname() {
+        return nickname;
     }
 
+    public int getScore() {
+        return score;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    public void setNickname(String nickname) {
+        this.nickname = nickname;
+    }
+
+    public void setScore(int score) {
+        this.score = score;
+    }
 }
