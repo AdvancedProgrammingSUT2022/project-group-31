@@ -1,8 +1,32 @@
 package Enums;
 
-public enum UnitsFeatures {;
+public enum UnitsFeatures {
 
-    //ARCHER(70, CombatType.ARCHERY, 4, 6, 2, 2, Technology.ARCHERY, ERA.ANCIENT);
+
+    ARCHER(70, CombatType.ARCHERY, 4, 6, 2, 2,null, Technology.ARCHERY);
+
+    private int cost;
+    private CombatType combatType;
+    private int combatStrength;
+    private int rangedCombatStrength;
+    private int range;
+    private int MP;
+    private Technology neededTechnology;
+    private StrategicResources neededResource;
+
+
+
+    UnitsFeatures(int cost, CombatType combatType, int combatStrength, int rangedCombatStrength, int range, int MP, StrategicResources neededResource, Technology neededTechnology) {
+        this.cost = cost;
+        this.combatType = combatType;
+        this.combatStrength = combatStrength;
+        this.rangedCombatStrength = rangedCombatStrength;
+        this.range = range;
+        this.MP = MP;
+        this.neededTechnology = neededTechnology;
+        this.neededResource = neededResource;
+    }
+
 
 
     public int getCost() {
@@ -37,34 +61,12 @@ public enum UnitsFeatures {;
         return neededResource;
     }
 
-    public ERA getEra() {
-        return era;
-    }
 
-    private int cost;
-    private CombatType combatType;
-    private int combatStrength;
-    private int rangedCombatStrength;
-    private int range;
-    private int MP;
-    private Technology neededTechnology;
-    private StrategicResources neededResource;
-    private ERA era;
 
-    UnitsFeatures(int cost, CombatType combatType, int combatStrength,
-                  int rangedCombatStrength, int range, int MP,
-                  StrategicResources neededResource, Technology neededTechnology
-            , ERA era) {
-        this.cost = cost;
-        this.combatType = combatType;
-        this.combatStrength = combatStrength;
-        this.rangedCombatStrength = rangedCombatStrength;
-        this.range = range;
-        this.MP = MP;
-        this.era = era;
-        this.neededTechnology = neededTechnology;
-        this.neededResource = neededResource;
-    }
+
+
+
+
 
 
 }

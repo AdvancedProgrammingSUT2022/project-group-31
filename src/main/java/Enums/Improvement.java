@@ -4,7 +4,12 @@ public enum Improvement {
     CAMP(0, 0, 0, Technology.TRAPPING),
     FARM(1, 0, 0, Technology.AGRICULTURE),
     LUMBER_MILL(0, 1, 0, Technology.CONSTRUCTION),
-    MINE(0,1,0,Technology.MINING);
+    MINE(0, 1, 0, Technology.MINING),
+    PASTURE(0, 0, 0, Technology.ANIMAL_HUSBANDRY),
+    FARMING(0, 0, 0, Technology.CALENDER),
+    STONE_MINE(0, 0, 0, Technology.MASONRY),
+    TRADING_POST(0, 0, 1, Technology.TRAPPING),
+    FACTORY(0, 2, 0, Technology.ENGINEERING);
 
 
     private int food;
