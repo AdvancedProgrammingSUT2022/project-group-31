@@ -1,3 +1,4 @@
+import Enums.Message;
 import view.LoginMenu;
 
 public class Main {

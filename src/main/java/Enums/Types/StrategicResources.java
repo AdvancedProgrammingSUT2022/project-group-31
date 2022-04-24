@@ -1,4 +1,7 @@
-package Enums;
+package Enums.Types;
+
+import Enums.Types.Improvement;
+import Enums.Types.Technology;
 
 public enum StrategicResources {
     COAL(0, 1, 0, Technology.MINING, Improvement.MINE),
@@ -13,11 +16,11 @@ public enum StrategicResources {
         this.neededImprovement = neededImprovement;
     }
 
-    private int food;
-    private int production;
-    private int gold;
-    private Technology neededTechnology;
-    private Improvement neededImprovement;
+    private final int food;
+    private final int production;
+    private final int gold;
+    private final Technology neededTechnology;
+    private final Improvement neededImprovement;
 
     public int getFood() {
         return food;

@@ -1,4 +1,4 @@
-package Enums;
+package Enums.Types;
 
 public enum LandFeature {
     VALLEY(2, 0, 0, -0.33, 1 ),
@@ -8,11 +8,11 @@ public enum LandFeature {
     LAGOON(-1, 0, 0, -0.33, 2),
     OASIS(3, 0, 1, -0.33, 1);
 
-    private int food;
-    private int production;
-    private int gold;
-    private double battleEfficacy;
-    private int MP;
+    private final int food;
+    private final int production;
+    private final int gold;
+    private final double battleEfficacy;
+    private final int MP;
     private HEX[] canBeFindOn;
 
     LandFeature(int food, int production, int gold, double battleEfficacy, int MP) {

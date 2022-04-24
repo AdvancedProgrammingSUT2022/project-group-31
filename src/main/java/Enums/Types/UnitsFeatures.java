@@ -1,18 +1,18 @@
-package Enums;
+package Enums.Types;
 
 public enum UnitsFeatures {
 
 
     ARCHER(70, CombatType.ARCHERY, 4, 6, 2, 2,null, Technology.ARCHERY);
 
-    private int cost;
-    private CombatType combatType;
-    private int combatStrength;
-    private int rangedCombatStrength;
-    private int range;
-    private int MP;
-    private Technology neededTechnology;
-    private StrategicResources neededResource;
+    private final int cost;
+    private final CombatType combatType;
+    private final int combatStrength;
+    private final int rangedCombatStrength;
+    private final int range;
+    private final int MP;
+    private final Technology neededTechnology;
+    private final StrategicResources neededResource;
 
 
 

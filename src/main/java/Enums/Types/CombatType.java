@@ -1,4 +1,4 @@
-package Enums;
+package Enums.Types;
 
 public enum CombatType {
     ARCHERY,
@@ -8,7 +8,7 @@ public enum CombatType {
     CIVILIAN,
     SIEGE,
     GUNPOWDER,
-    ARMORED;
+    ARMORED
 
 
 }

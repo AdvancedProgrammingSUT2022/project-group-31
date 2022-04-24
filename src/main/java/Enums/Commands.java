@@ -16,7 +16,7 @@ public enum Commands {
     CHANGE_PASSWORD("profile change --password --current (?<currentPassword>[a-zA-Z]+) --new (?<newPassword>[a-zA-Z]+)");
 
 
-    private String regex;
+    private final String regex;
 
     Commands(String regex) {
         this.regex = regex;

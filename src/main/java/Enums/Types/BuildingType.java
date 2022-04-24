@@ -1,4 +1,4 @@
-package Enums;
+package Enums.Types;
 
 public enum BuildingType {
     BARRACKS(80, 1, Technology.BRONZE_WORKING, null),
@@ -36,10 +36,10 @@ public enum BuildingType {
     HOSPITAL(400, 2, Technology.BIOLOGY, null),
     MILITARY_BASE(450, 4, Technology.TELEGRAPH, new BuildingType[]{CASTLE}),
     STOCK_EXCHANGE(650, 0, Technology.ELECTRICITY, new BuildingType[]{BANK}); //TODO
-    private int cost;
-    private int maintenance;
-    private Technology neededTechnology;
-    private BuildingType[] neededBuildings;
+    private final int cost;
+    private final int maintenance;
+    private final Technology neededTechnology;
+    private final BuildingType[] neededBuildings;
 
     public int getCost() {
         return cost;

@@ -1,4 +1,6 @@
-package Enums;
+package Enums.Types;
+
+import Enums.Types.LandFeature;
 
 public enum HEX {
     DESERT(0, 0, 0, -0.33, 1,new LandFeature[] {LandFeature.OASIS}),
@@ -11,12 +13,12 @@ public enum HEX {
     TUNDRA(1, 0, 0, -0.33, 1,new LandFeature[]{ LandFeature.ICE});
 
 
-    private int food;
-    private int production;
-    private int gold;
-    private double battleEfficacy;
-    private int MP;
-    private LandFeature[] featuresCanHave;
+    private final int food;
+    private final int production;
+    private final int gold;
+    private final double battleEfficacy;
+    private final int MP;
+    private final LandFeature[] featuresCanHave;
 
 
 

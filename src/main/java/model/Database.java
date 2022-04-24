@@ -1,23 +1,23 @@
 package model;
 
-import Enums.HEX;
+import Enums.Types.HEX;
 
 import java.util.ArrayList;
 
-public class  Database {
+public class Database {
     private static Database instance = null;
 
     private Database() {
     }
 
     public static Database getInstance() {
-        if (instance == null) instance = new Database();
+        if (instance == null)  instance = new Database();
         return instance;
 
     }
 
-private static     ArrayList<User> users;
-   private static ArrayList<HEX> map;
+    private static ArrayList<User> users;
+    private static ArrayList<HEX> map;
 
     public void addUser(User user) {
         users.add(user);
@@ -36,14 +36,14 @@ private static     ArrayList<User> users;
         }
         return null;
     }
-public User getUserByNickname (String nickname )
-{
-    for (User user : users) {
-        if (user.nickname.equals(nickname))
-            return user;
+
+    public User getUserByNickname(String nickname) {
+        for (User user : users) {
+            if (user.nickname.equals(nickname)) return user;
+        }
+        return null;
     }
-    return null;
-}
+
     public void changePassword(User user, String newPassword) {
         user.setPassword(newPassword);
     }

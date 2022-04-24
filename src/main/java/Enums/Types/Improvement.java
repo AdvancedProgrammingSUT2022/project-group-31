@@ -1,4 +1,4 @@
-package Enums;
+package Enums.Types;
 
 public enum Improvement {
     CAMP(0, 0, 0, Technology.TRAPPING),
@@ -12,10 +12,10 @@ public enum Improvement {
     FACTORY(0, 2, 0, Technology.ENGINEERING);
 
 
-    private int food;
-    private int production;
-    private int gold;
-    private Technology neededTechnology;
+    private final int food;
+    private final int production;
+    private final int gold;
+    private final Technology neededTechnology;
 
     public int getFood() {
         return food;

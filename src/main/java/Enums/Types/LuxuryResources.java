@@ -1,7 +1,9 @@
-package Enums;
+package Enums.Types;
+
+import Enums.Types.Improvement;
 
 public enum LuxuryResources {
-    COTTON(0,0,2,Improvement.FARMING),
+    COTTON(0,0,2, Improvement.FARMING),
     COLOR(0,0,2,Improvement.FARMING),
     FUR(0,0,2,Improvement.FARMING),
     GEMSTONE(0,0,3,Improvement.MINE),
@@ -20,11 +22,11 @@ LuxuryResources(int food, int production , int gold, Improvement neededImproveme
     this.production= production;
     firstFind = true;
 }
-    private int food;
-    private int production;
-    private int gold;
-    private  boolean firstFind;
-    private Improvement neededImprovement;
+    private final int food;
+    private final int production;
+    private final int gold;
+    private final boolean firstFind;
+    private final Improvement neededImprovement;
 
     public int getFood() {
         return food;

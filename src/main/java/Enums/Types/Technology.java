@@ -1,4 +1,4 @@
-package Enums;
+package Enums.Types;
 
 
 public enum Technology {
@@ -58,9 +58,9 @@ public enum Technology {
     ELECTRICITY ( 1900, new Technology[]{BIOLOGY, STEAM_POWER}, ERA.INDUSTRIAL),
     RADIO (2200 , new Technology[]{ELECTRICITY}, ERA.INDUSTRIAL),
     TELEGRAPH(2200, new Technology[]{ELECTRICITY}, ERA.INDUSTRIAL);
-    private int trophyCost;
-    private Technology[] neededTechnology;
-    private ERA era;
+    private final int trophyCost;
+    private final Technology[] neededTechnology;
+    private final ERA era;
 
     Technology(int trophyCost, Technology[] neededTechnology, ERA era) {
         this.era = era;
