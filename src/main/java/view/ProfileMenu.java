@@ -2,24 +2,30 @@ package view;
 
 import Controller.UserController;
 import Enums.Commands;
+import model.User;
 
-import java.util.Scanner;
 import java.util.regex.Matcher;
 
 public class ProfileMenu {
-    public static Scanner scanner = new Scanner(System.in);
-    public void run(){
-        Matcher matcher;
-        String input  = scanner.nextLine();
-
-
-        while (true)
-        {
-            if ((matcher = Commands.getMatcher(input,Commands.CHANGE_PASSWORD)).find())
-            {
-               // UserController.
+    public static void run(User user){
+        while (true){
+            Matcher matcher;
+            String input=LoginMenu.scanner.nextLine();
+            if ((matcher= Commands.getMatcher(input,Commands.CHANGE_NICKNAME)).find()){
+                UserController.changeNickname(matcher,user);
+            }else if ((matcher=Commands.getMatcher(input, Commands.CHANGE_PASSWORD)).find()){
+                UserController.changePassword(matcher, user);
+            }else if ((matcher=Commands.getMatcher(input,Commands.MENU_EXIT)).find()){
+                MainMenu.run(user);
+            }else if ((matcher=Commands.getMatcher(input, Commands.MENU_SHOW_CURRENT)).find()){
+                System.out.println("profile Menu");
+            }else{
+                System.out.println("INVALID MASSAGE");
             }
-            break;
+
+            
+
         }
+
     }
 }

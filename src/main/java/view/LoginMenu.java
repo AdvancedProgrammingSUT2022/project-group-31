@@ -18,12 +18,20 @@ public class LoginMenu {
                 UserController.logIn(matcher);
             } else if ((matcher=Commands.getMatcher(input,Commands.CREATE_USER1)).find()) {
                 UserController.signIn(matcher);
-            }else {
+            } else if ((matcher=Commands.getMatcher(input,Commands.MENU_ENTER)).find()){
+                System.out.println("please login first!");
+            } else if ((matcher=Commands.getMatcher(input, Commands.MENU_SHOW_CURRENT)).find()){
+                System.out.println("Login Menu");
+
+            } else if ((matcher=Commands.getMatcher(input,Commands.MENU_EXIT)).find()){
+                System.exit(0);
+            } else {
                 System.out.println("INVALID MASSAGE");
 
             }
           }
        }
+
 
     }
 
