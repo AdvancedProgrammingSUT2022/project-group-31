@@ -24,9 +24,9 @@ public class MainMenu {
             } else if ((matcher=Commands.getMatcher(input, Commands.MENU_ENTER)).find()) {
                 String menuName = matcher.group("menuName");
                 menuName = menuName.toLowerCase();
-                if (menuName.equals("profilemenu")) {
+                if (menuName.equals("profile menu")) {
                     ProfileMenu.run(user);
-                } else if (menuName.equals("playgamemenu")) {
+                } else if (menuName.equals("play game menu")) {
                     PlayGameMenu.run(user);
                 } else {
                     System.out.println("INVALID MASSAGE");
