@@ -1,6 +1,6 @@
 package Enums.Types;
 
-public enum Improvement {
+public enum ImprovementTypes {
     CAMP(0, 0, 0, Technology.TRAPPING),
     FARM(1, 0, 0, Technology.AGRICULTURE),
     LUMBER_MILL(0, 1, 0, Technology.CONSTRUCTION),
@@ -33,7 +33,7 @@ public enum Improvement {
         return neededTechnology;
     }
 
-    Improvement(int food, int production, int gold, Technology neededTechnology) {
+    ImprovementTypes(int food, int production, int gold, Technology neededTechnology) {
         this.food = food;
         this.production = production;
         this.gold = gold;

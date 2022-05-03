@@ -13,7 +13,7 @@ public enum LandFeature {
     private final int gold;
     private final double battleEfficacy;
     private final int MP;
-    private HEX[] canBeFindOn;
+    private HexTypes[] canBeFindOn;
 
     LandFeature(int food, int production, int gold, double battleEfficacy, int MP) {
         this.food = food;
@@ -45,7 +45,7 @@ public enum LandFeature {
         return MP;
     }
 
-    public HEX[] getCanBeFindOn() {
+    public HexTypes[] getCanBeFindOn() {
         return canBeFindOn;
     }
 }

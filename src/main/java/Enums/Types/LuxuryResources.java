@@ -1,20 +1,18 @@
 package Enums.Types;
 
-import Enums.Types.Improvement;
-
 public enum LuxuryResources {
-    COTTON(0,0,2, Improvement.FARMING),
-    COLOR(0,0,2,Improvement.FARMING),
-    FUR(0,0,2,Improvement.FARMING),
-    GEMSTONE(0,0,3,Improvement.MINE),
-    GOLD (0,0,2,Improvement.MINE),
-    FUMIGATION(0,0,2,Improvement.FARMING),
-    TUSK(0,0,2,Improvement.CAMP),
-    MARBLE(0,0,2,Improvement.STONE_MINE),
-    SILK(0,0,2,Improvement.FARMING),
-    SUGAR(0,0,2,Improvement.FARMING);
+    COTTON(0,0,2, ImprovementTypes.FARMING),
+    COLOR(0,0,2, ImprovementTypes.FARMING),
+    FUR(0,0,2, ImprovementTypes.FARMING),
+    GEMSTONE(0,0,3, ImprovementTypes.MINE),
+    GOLD (0,0,2, ImprovementTypes.MINE),
+    FUMIGATION(0,0,2, ImprovementTypes.FARMING),
+    TUSK(0,0,2, ImprovementTypes.CAMP),
+    MARBLE(0,0,2, ImprovementTypes.STONE_MINE),
+    SILK(0,0,2, ImprovementTypes.FARMING),
+    SUGAR(0,0,2, ImprovementTypes.FARMING);
     //TODO WHERE TO FIND THEM
-LuxuryResources(int food, int production , int gold, Improvement neededImprovement)
+LuxuryResources(int food, int production , int gold, ImprovementTypes neededImprovement)
 {
     this.food = food;
     this.gold = gold;
@@ -26,7 +24,7 @@ LuxuryResources(int food, int production , int gold, Improvement neededImproveme
     private final int production;
     private final int gold;
     private final boolean firstFind;
-    private final Improvement neededImprovement;
+    private final ImprovementTypes neededImprovement;
 
     public int getFood() {
         return food;
@@ -40,7 +38,7 @@ LuxuryResources(int food, int production , int gold, Improvement neededImproveme
         return gold;
     }
 
-    public Improvement getNeededImprovement() {
+    public ImprovementTypes getNeededImprovement() {
         return neededImprovement;
     }
 
