@@ -8,24 +8,25 @@ public class Database {
     private static Database instance = null;
 
     private Database() {
-        hex00 = new Hex(HexTypes.HILL.getName(), HexTypes.HILL.getFood(), HexTypes.HILL.getProduction(), HexTypes.HILL.getGold(), HexTypes.HILL.getBattleEfficacy(), HexTypes.HILL.getMP(), HexTypes.HILL.getColor());
-        hex01 = new Hex(HexTypes.DESERT.getName(), HexTypes.DESERT.getFood(), HexTypes.DESERT.getProduction(), HexTypes.DESERT.getGold(), HexTypes.DESERT.getBattleEfficacy(), HexTypes.DESERT.getMP(), HexTypes.DESERT.getColor());
-        hex02 = new Hex(HexTypes.PLAIN.getName(), HexTypes.PLAIN.getFood(), HexTypes.PLAIN.getProduction(), HexTypes.PLAIN.getGold(), HexTypes.PLAIN.getBattleEfficacy(), HexTypes.PLAIN.getMP(), HexTypes.PLAIN.getColor());
-        hex03 = new Hex(HexTypes.SNOW.getName(), HexTypes.SNOW.getFood(), HexTypes.SNOW.getProduction(), HexTypes.SNOW.getGold(), HexTypes.SNOW.getBattleEfficacy(), HexTypes.SNOW.getMP(), HexTypes.SNOW.getColor());
-        hex04 = new Hex(HexTypes.TUNDRA.getName(), HexTypes.TUNDRA.getFood(), HexTypes.TUNDRA.getProduction(), HexTypes.TUNDRA.getGold(), HexTypes.TUNDRA.getBattleEfficacy(), HexTypes.TUNDRA.getMP(), HexTypes.TUNDRA.getColor());
-        hex05 = new Hex(HexTypes.HILL.getName(), HexTypes.HILL.getFood(), HexTypes.HILL.getProduction(), HexTypes.HILL.getGold(), HexTypes.HILL.getBattleEfficacy(), HexTypes.HILL.getMP(), HexTypes.HILL.getColor());
-        hex10 = new Hex(HexTypes.MEADOW.getName(), HexTypes.MEADOW.getFood(), HexTypes.MEADOW.getProduction(), HexTypes.MEADOW.getGold(), HexTypes.MEADOW.getBattleEfficacy(), HexTypes.MEADOW.getMP(), HexTypes.MEADOW.getColor());
-        hex11 = new Hex(HexTypes.OCEAN.getName(), HexTypes.OCEAN.getFood(), HexTypes.OCEAN.getProduction(), HexTypes.OCEAN.getGold(), HexTypes.OCEAN.getBattleEfficacy(), HexTypes.OCEAN.getMP(), HexTypes.OCEAN.getColor());
-        hex12 = new Hex(HexTypes.HILL.getName(), HexTypes.HILL.getFood(), HexTypes.HILL.getProduction(), HexTypes.HILL.getGold(), HexTypes.HILL.getBattleEfficacy(), HexTypes.HILL.getMP(), HexTypes.HILL.getColor());
-        hex23 = new Hex(HexTypes.DESERT.getName(), HexTypes.DESERT.getFood(), HexTypes.DESERT.getProduction(), HexTypes.DESERT.getGold(), HexTypes.DESERT.getBattleEfficacy(), HexTypes.DESERT.getMP(), HexTypes.DESERT.getColor());
-        hex14 = new Hex(HexTypes.PLAIN.getName(), HexTypes.PLAIN.getFood(), HexTypes.PLAIN.getProduction(), HexTypes.PLAIN.getGold(), HexTypes.PLAIN.getBattleEfficacy(), HexTypes.PLAIN.getMP(), HexTypes.PLAIN.getColor());
-        hex15 = new Hex(HexTypes.SNOW.getName(), HexTypes.SNOW.getFood(), HexTypes.SNOW.getProduction(), HexTypes.SNOW.getGold(), HexTypes.SNOW.getBattleEfficacy(), HexTypes.SNOW.getMP(), HexTypes.SNOW.getColor());
-        hex20 = new Hex(HexTypes.TUNDRA.getName(), HexTypes.TUNDRA.getFood(), HexTypes.TUNDRA.getProduction(), HexTypes.TUNDRA.getGold(), HexTypes.TUNDRA.getBattleEfficacy(), HexTypes.TUNDRA.getMP(), HexTypes.TUNDRA.getColor());
-        hex21 = new Hex(HexTypes.PLAIN.getName(), HexTypes.PLAIN.getFood(), HexTypes.PLAIN.getProduction(), HexTypes.PLAIN.getGold(), HexTypes.PLAIN.getBattleEfficacy(), HexTypes.PLAIN.getMP(), HexTypes.PLAIN.getColor());
-        hex22 = new Hex(HexTypes.PLAIN.getName(), HexTypes.PLAIN.getFood(), HexTypes.PLAIN.getProduction(), HexTypes.PLAIN.getGold(), HexTypes.PLAIN.getBattleEfficacy(), HexTypes.PLAIN.getMP(), HexTypes.PLAIN.getColor());
-        hex13 = new Hex(HexTypes.MOUNTAIN.getName(), HexTypes.MOUNTAIN.getFood(), HexTypes.MOUNTAIN.getProduction(), HexTypes.MOUNTAIN.getGold(), HexTypes.MOUNTAIN.getBattleEfficacy(), HexTypes.MOUNTAIN.getMP(), HexTypes.MOUNTAIN.getColor());
-        hex24 = new Hex(HexTypes.HILL.getName(), HexTypes.HILL.getFood(), HexTypes.HILL.getProduction(), HexTypes.HILL.getGold(), HexTypes.HILL.getBattleEfficacy(), HexTypes.HILL.getMP(), HexTypes.HILL.getColor());
-        hex25 = new Hex(HexTypes.MEADOW.getName(), HexTypes.MEADOW.getFood(), HexTypes.MEADOW.getProduction(), HexTypes.MEADOW.getGold(), HexTypes.MEADOW.getBattleEfficacy(), HexTypes.MEADOW.getMP(), HexTypes.MEADOW.getColor());
+
+        map.add(hex00 = new Hex(0, 0, HexTypes.HILL.getName(), HexTypes.HILL.getFood(), HexTypes.HILL.getProduction(), HexTypes.HILL.getGold(), HexTypes.HILL.getBattleEfficacy(), HexTypes.HILL.getMP(), HexTypes.HILL.getColor()));
+        map.add(hex01 = new Hex(0, 1, HexTypes.DESERT.getName(), HexTypes.DESERT.getFood(), HexTypes.DESERT.getProduction(), HexTypes.DESERT.getGold(), HexTypes.DESERT.getBattleEfficacy(), HexTypes.DESERT.getMP(), HexTypes.DESERT.getColor()));
+        map.add(hex02 = new Hex(0, 2, HexTypes.PLAIN.getName(), HexTypes.PLAIN.getFood(), HexTypes.PLAIN.getProduction(), HexTypes.PLAIN.getGold(), HexTypes.PLAIN.getBattleEfficacy(), HexTypes.PLAIN.getMP(), HexTypes.PLAIN.getColor()));
+        map.add(hex03 = new Hex(0, 3, HexTypes.SNOW.getName(), HexTypes.SNOW.getFood(), HexTypes.SNOW.getProduction(), HexTypes.SNOW.getGold(), HexTypes.SNOW.getBattleEfficacy(), HexTypes.SNOW.getMP(), HexTypes.SNOW.getColor()));
+        map.add(hex04 = new Hex(0, 4, HexTypes.TUNDRA.getName(), HexTypes.TUNDRA.getFood(), HexTypes.TUNDRA.getProduction(), HexTypes.TUNDRA.getGold(), HexTypes.TUNDRA.getBattleEfficacy(), HexTypes.TUNDRA.getMP(), HexTypes.TUNDRA.getColor()));
+        map.add(hex05 = new Hex(0, 5, HexTypes.HILL.getName(), HexTypes.HILL.getFood(), HexTypes.HILL.getProduction(), HexTypes.HILL.getGold(), HexTypes.HILL.getBattleEfficacy(), HexTypes.HILL.getMP(), HexTypes.HILL.getColor()));
+        map.add(hex10 = new Hex(1, 0, HexTypes.MEADOW.getName(), HexTypes.MEADOW.getFood(), HexTypes.MEADOW.getProduction(), HexTypes.MEADOW.getGold(), HexTypes.MEADOW.getBattleEfficacy(), HexTypes.MEADOW.getMP(), HexTypes.MEADOW.getColor()));
+        map.add(hex11 = new Hex(1, 1, HexTypes.OCEAN.getName(), HexTypes.OCEAN.getFood(), HexTypes.OCEAN.getProduction(), HexTypes.OCEAN.getGold(), HexTypes.OCEAN.getBattleEfficacy(), HexTypes.OCEAN.getMP(), HexTypes.OCEAN.getColor()));
+        map.add(hex12 = new Hex(1, 2, HexTypes.HILL.getName(), HexTypes.HILL.getFood(), HexTypes.HILL.getProduction(), HexTypes.HILL.getGold(), HexTypes.HILL.getBattleEfficacy(), HexTypes.HILL.getMP(), HexTypes.HILL.getColor()));
+        map.add(hex13 = new Hex(1, 3, HexTypes.MOUNTAIN.getName(), HexTypes.MOUNTAIN.getFood(), HexTypes.MOUNTAIN.getProduction(), HexTypes.MOUNTAIN.getGold(), HexTypes.MOUNTAIN.getBattleEfficacy(), HexTypes.MOUNTAIN.getMP(), HexTypes.MOUNTAIN.getColor()));
+        map.add(hex14 = new Hex(1, 4, HexTypes.PLAIN.getName(), HexTypes.PLAIN.getFood(), HexTypes.PLAIN.getProduction(), HexTypes.PLAIN.getGold(), HexTypes.PLAIN.getBattleEfficacy(), HexTypes.PLAIN.getMP(), HexTypes.PLAIN.getColor()));
+        map.add(hex15 = new Hex(1, 5, HexTypes.SNOW.getName(), HexTypes.SNOW.getFood(), HexTypes.SNOW.getProduction(), HexTypes.SNOW.getGold(), HexTypes.SNOW.getBattleEfficacy(), HexTypes.SNOW.getMP(), HexTypes.SNOW.getColor()));
+        map.add(hex20 = new Hex(2, 0, HexTypes.TUNDRA.getName(), HexTypes.TUNDRA.getFood(), HexTypes.TUNDRA.getProduction(), HexTypes.TUNDRA.getGold(), HexTypes.TUNDRA.getBattleEfficacy(), HexTypes.TUNDRA.getMP(), HexTypes.TUNDRA.getColor()));
+        map.add(hex21 = new Hex(2, 1, HexTypes.PLAIN.getName(), HexTypes.PLAIN.getFood(), HexTypes.PLAIN.getProduction(), HexTypes.PLAIN.getGold(), HexTypes.PLAIN.getBattleEfficacy(), HexTypes.PLAIN.getMP(), HexTypes.PLAIN.getColor()));
+        map.add(hex22 = new Hex(2, 2, HexTypes.PLAIN.getName(), HexTypes.PLAIN.getFood(), HexTypes.PLAIN.getProduction(), HexTypes.PLAIN.getGold(), HexTypes.PLAIN.getBattleEfficacy(), HexTypes.PLAIN.getMP(), HexTypes.PLAIN.getColor()));
+        map.add(hex23 = new Hex(2, 3, HexTypes.DESERT.getName(), HexTypes.DESERT.getFood(), HexTypes.DESERT.getProduction(), HexTypes.DESERT.getGold(), HexTypes.DESERT.getBattleEfficacy(), HexTypes.DESERT.getMP(), HexTypes.DESERT.getColor()));
+        map.add(hex24 = new Hex(2, 4, HexTypes.HILL.getName(), HexTypes.HILL.getFood(), HexTypes.HILL.getProduction(), HexTypes.HILL.getGold(), HexTypes.HILL.getBattleEfficacy(), HexTypes.HILL.getMP(), HexTypes.HILL.getColor()));
+        map.add(hex25 = new Hex(2, 5, HexTypes.MEADOW.getName(), HexTypes.MEADOW.getFood(), HexTypes.MEADOW.getProduction(), HexTypes.MEADOW.getGold(), HexTypes.MEADOW.getBattleEfficacy(), HexTypes.MEADOW.getMP(), HexTypes.MEADOW.getColor()));
 
     }
 
@@ -35,8 +36,8 @@ public class Database {
 
     }
 
-    private static ArrayList<User> users;
-    private static ArrayList<HexTypes> map;
+    private static ArrayList<User> users = new ArrayList<>();
+    private static ArrayList<Hex> map = new ArrayList<>();
     private Hex hex00;
     private Hex hex01;
     private Hex hex02;
@@ -80,6 +81,10 @@ public class Database {
             if (user.nickname.equals(nickname)) return user;
         }
         return null;
+    }
+
+    public void addHex(Hex hex) {
+        map.add(hex);
     }
 
     public void initializeHex() {

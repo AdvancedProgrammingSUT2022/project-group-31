@@ -1,10 +1,10 @@
 package model;
 
-import Enums.Types.ImprovementTypes;
-
 public class Hex {
     private String color;
     private String typeName;
+    private int x;
+    private int y;
     private int MP;
     private int food;
     private int gold;
@@ -14,17 +14,18 @@ public class Hex {
     private boolean isRiverOnSouth;
     private boolean isRiverOnNorthWest;
     private boolean isRiverOnNorthEast;
-    private boolean isRiverOnNorthSouthEast;
-    private boolean isRiverOnNorthSouthWest;
+    private boolean isRiverOnSouthEast;
+    private boolean isRiverOnSouthWest;
     private boolean hasRoad = false;
     private UnMilitaryUnit unMilitaryUnit = null;
     private MilitaryUnit militaryUnit = null;
     private Improvement improvement = null;
     private User owner = null;
 
-    public Hex(String typeName, int food, int production, int gold, double battleEfficiency, int MP, String color) {
+    public Hex(int x, int y,String typeName, int food, int production, int gold, double battleEfficiency, int MP, String color) {
         this.typeName = typeName;
-
+this.x = x;
+this.y = y;
         this.food = food;
         this.production = production;
         this.gold = gold;
@@ -81,12 +82,12 @@ public class Hex {
         isRiverOnNorthEast = riverOnNorthEast;
     }
 
-    public void setRiverOnNorthSouthEast(boolean riverOnNorthSouthEast) {
-        isRiverOnNorthSouthEast = riverOnNorthSouthEast;
+    public void setRiverOnSouthEast(boolean riverOnSouthEast) {
+        isRiverOnSouthEast = riverOnSouthEast;
     }
 
-    public void setRiverOnNorthSouthWest(boolean riverOnNorthSouthWest) {
-        isRiverOnNorthSouthWest = riverOnNorthSouthWest;
+    public void setRiverOnSouthWest(boolean riverOnSouthWest) {
+        isRiverOnSouthWest = riverOnSouthWest;
     }
 
     public String getTypeName() {
@@ -133,12 +134,12 @@ public class Hex {
         return isRiverOnNorthEast;
     }
 
-    public boolean isRiverOnNorthSouthEast() {
-        return isRiverOnNorthSouthEast;
+    public boolean isRiverOnSouthEast() {
+        return isRiverOnSouthEast;
     }
 
-    public boolean isRiverOnNorthSouthWest() {
-        return isRiverOnNorthSouthWest;
+    public boolean isRiverOnSouthWest() {
+        return isRiverOnSouthWest;
     }
 
     public void setHasRoad(boolean hasRoad) {
@@ -179,5 +180,13 @@ public class Hex {
 
     public User getOwner() {
         return owner;
+    }
+
+    public int getX() {
+        return x;
+    }
+
+    public int getY() {
+        return y;
     }
 }
