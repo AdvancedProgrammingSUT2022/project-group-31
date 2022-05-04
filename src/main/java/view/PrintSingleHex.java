@@ -14,15 +14,15 @@ public class PrintSingleHex {
         hex.setRiverOnSouthEast(true);
         hex.setRiverOnSouth(true);
         hex.setRiverOnNorth(true);
-        System.out.println("      " + (hex.isRiverOnNorth() ? THE_BLUE : "") + "____________" + RESET);
+        System.out.println("      " + (hex.isRiverOnNorth() ? THE_BLUE : "") + "_____________" + RESET);
         System.out.println("     " + (hex.isRiverOnNorthWest() ? BLUE : "") + "/" + hex.getColor() + "             " + RESET + (hex.isRiverOnNorthEast() ? BLUE : "") + "\\" + RESET);
-        System.out.println("    " + (hex.isRiverOnNorthWest() ? BLUE : "") + "/" + hex.getColor() + "               " + RESET + (hex.isRiverOnNorthEast() ? BLUE : "") + "\\" + RESET);
+        System.out.println("    " + (hex.isRiverOnNorthWest() ? BLUE : "") + "/" + hex.getColor() + "     (" + hex.getX() + "," + hex.getY() + ")     " + RESET + (hex.isRiverOnNorthEast() ? BLUE : "") + "\\" + RESET);
         System.out.println("   " + (hex.isRiverOnNorthWest() ? BLUE : "") + "/" + hex.getColor() + "                 " + RESET + (hex.isRiverOnNorthEast() ? BLUE : "") + "\\" + RESET);
         System.out.println("   " + (hex.isRiverOnSouthWest() ? BLUE : "") + "\\" + hex.getColor() + "                 " + RESET + (hex.isRiverOnSouthEast() ? BLUE : "") + "/" + RESET);
         System.out.println("    " + (hex.isRiverOnSouthWest() ? BLUE : "") + "\\" + hex.getColor() + "               " + RESET + (hex.isRiverOnSouthEast() ? BLUE : "") + "/" + RESET);
         System.out.println("     " + (hex.isRiverOnSouthWest() ? BLUE : "") + "\\" + hex.getColor() + "             " + RESET + (hex.isRiverOnSouthEast() ? BLUE : "") + "/" + RESET);
         System.out.println("      " + (hex.isRiverOnNorth() ? THE_BLUE : "") + "-------------" + RESET);
-        System.out.println("hex state is: "+"FOG OF WAR");
+        System.out.println("hex state is: " + "FOG OF WAR");
         System.out.println("owner: " + hex.getOwner());
         System.out.println("battle effect: " + hex.getBattleEfficiency());
     }

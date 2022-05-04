@@ -1,8 +1,14 @@
 package model;
 
+import Enums.Types.BonusResources;
+import Enums.Types.LandFeatureType;
+import Enums.Types.LuxuryResources;
+import Enums.Types.StrategicResources;
+
 public class Hex {
     private String color;
     private String typeName;
+    private LandFeatureType landFeatureType;
     private int x;
     private int y;
     private int MP;
@@ -21,17 +27,25 @@ public class Hex {
     private MilitaryUnit militaryUnit = null;
     private Improvement improvement = null;
     private User owner = null;
+    private BonusResources bonusResources;
+    private LuxuryResources luxuryResources;
+    private StrategicResources strategicResources;
 
-    public Hex(int x, int y,String typeName, int food, int production, int gold, double battleEfficiency, int MP, String color) {
+
+
+
+    public Hex(int x, int y, String typeName, int food, int production, int gold, double battleEfficiency, int MP, String color) {
         this.typeName = typeName;
-this.x = x;
-this.y = y;
+        this.x = x;
+        this.y = y;
         this.food = food;
         this.production = production;
         this.gold = gold;
         this.battleEfficiency = battleEfficiency;
         this.MP = MP;
         this.color = color;
+
+
 
     }
 

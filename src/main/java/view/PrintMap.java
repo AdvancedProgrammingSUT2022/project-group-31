@@ -40,7 +40,7 @@ public class PrintMap {
         System.out.print(database.Hex02().getColor() + "         " + RESET + "/"); //hex(0,2)
         System.out.print(database.Hex03().getColor() + "     " + RESET + "\\"); //hex(0,3)
         System.out.print(database.Hex04().getColor() + "         " + RESET + "/"); //hex(0,4)
-        System.out.print(database.Hex05().getColor() + "     " + RESET + BLUE+"\\"+RESET); //hex(0,5)
+        System.out.print(database.Hex05().getColor() + "     " + RESET + BLUE + "\\" + RESET); //hex(0,5)
         System.out.println();
 
         //line5
@@ -49,7 +49,7 @@ public class PrintMap {
         System.out.print(database.Hex02().getColor() + "       " + RESET + "/"); //hex(0,2)
         System.out.print(database.Hex03().getColor() + " (0,3) " + RESET + "\\"); //hex(0,3)
         System.out.print(database.Hex04().getColor() + "       " + RESET + "/"); //hex(0,4)
-        System.out.print(database.Hex05().getColor() + " (0,5) " + RESET + BLUE+"\\"+RESET); //hex(0,5)
+        System.out.print(database.Hex05().getColor() + " (0,5) " + RESET + BLUE + "\\" + RESET); //hex(0,5)
         System.out.println();
 
         //line6
@@ -58,12 +58,12 @@ public class PrintMap {
         System.out.print(database.Hex02().getColor() + "_____" + RESET + "/"); //hex(0,2)
         System.out.print(database.Hex03().getColor() + "         " + RESET + "\\"); //hex(0,3)
         System.out.print(database.Hex04().getColor() + "_____" + RESET + "/"); //hex(0,4)
-        System.out.print(database.Hex05().getColor() + "         " + RESET + BLUE+"\\"+RESET); //hex(0,5)
+        System.out.print(database.Hex05().getColor() + "         " + RESET + BLUE + "\\" + RESET); //hex(0,5)
         System.out.println();
 
         //line7
         System.out.print("  /" + database.Hex10().getColor() + "     " + RESET + "\\"); //hex(1,0)
-        System.out.print(database.Hex01().getColor() + "         " + RESET +BLUE+ "/"+RESET); //hex(0,1)
+        System.out.print(database.Hex01().getColor() + "         " + RESET + BLUE + "/" + RESET); //hex(0,1)
         System.out.print(database.Hex12().getColor() + "     " + RESET + "\\"); //hex(1,2)
         System.out.print(database.Hex03().getColor() + "         " + RESET + "/"); //hex(0,3)
         System.out.print(database.Hex14().getColor() + "     " + RESET + "\\"); //hex(1,4)
@@ -72,7 +72,7 @@ public class PrintMap {
 
         //line8
         System.out.print(" /" + database.Hex10().getColor() + " (1,0) " + RESET + "\\"); //hex(1,0)
-        System.out.print(database.Hex01().getColor() + "       " + RESET + BLUE+ "/"+RESET); //hex(0,1)
+        System.out.print(database.Hex01().getColor() + "       " + RESET + BLUE + "/" + RESET); //hex(0,1)
         System.out.print(database.Hex12().getColor() + " (1,2) " + RESET + "\\"); //hex(1,2)
         System.out.print(database.Hex03().getColor() + "       " + RESET + "/"); //hex(0,3)
         System.out.print(database.Hex14().getColor() + " (1,4) " + RESET + "\\"); //hex(1,4)
@@ -81,7 +81,7 @@ public class PrintMap {
 
         //line9
         System.out.print("/" + database.Hex10().getColor() + "         " + RESET + "\\"); //hex(1,0)
-        System.out.print(database.Hex01().getColor() + "_____" + RESET + BLUE+ "/"+RESET); //hex(0,1)
+        System.out.print(database.Hex01().getColor() + "_____" + RESET + BLUE + "/" + RESET); //hex(0,1)
         System.out.print(database.Hex12().getColor() + "         " + RESET + "\\"); //hex(1,2)
         System.out.print(database.Hex03().getColor() + "_____" + RESET + "/"); //hex(0,3)
         System.out.print(database.Hex14().getColor() + "         " + RESET + "\\"); //hex(1,4)
@@ -92,7 +92,7 @@ public class PrintMap {
         System.out.print("\\" + database.Hex10().getColor() + "         " + RESET + "/"); //hex(1,0)
         System.out.print(database.Hex11().getColor() + "     " + RESET + "\\"); //hex(1,1)
         System.out.print(database.Hex12().getColor() + "         " + RESET + "/"); //hex(1,2)
-        System.out.print(database.Hex13().getColor() + "     " + RESET +  BLUE+"\\"+RESET); //hex(1,3)
+        System.out.print(database.Hex13().getColor() + "     " + RESET + BLUE + "\\" + RESET); //hex(1,3)
         System.out.print(database.Hex14().getColor() + "         " + RESET + "/"); //hex(1,4)
         System.out.print(database.Hex15().getColor() + "     " + RESET + "\\"); //hex(1,5)
         System.out.println();
@@ -146,7 +146,7 @@ public class PrintMap {
         System.out.print("\\" + database.Hex20().getColor() + "         " + RESET + "/"); //hex(2,0)
         System.out.print(database.Hex21().getColor() + "     " + RESET + "\\"); //hex(2,1)
         System.out.print(database.Hex22().getColor() + "         " + RESET + "/"); //hex(2,2)
-        System.out.print(database.Hex23().getColor() + "     " + RESET + BLUE+"\\"+RESET); //hex(2,3)
+        System.out.print(database.Hex23().getColor() + "     " + RESET + BLUE + "\\" + RESET); //hex(2,3)
         System.out.print(database.Hex24().getColor() + "         " + RESET + "/"); //hex(2,4)
         System.out.print(database.Hex25().getColor() + "     " + RESET + "\\"); //hex(2,5)
         System.out.println();
@@ -155,7 +155,7 @@ public class PrintMap {
         System.out.print(" \\" + database.Hex20().getColor() + "       " + RESET + "/"); //hex(2,0)
         System.out.print(database.Hex21().getColor() + " (2,1) " + RESET + "\\"); //hex(2,1)
         System.out.print(database.Hex22().getColor() + "       " + RESET + "/"); //hex(2,2)
-        System.out.print(database.Hex23().getColor() + " (2,3) " + RESET +  BLUE+"\\"+RESET); //hex(2,3)
+        System.out.print(database.Hex23().getColor() + " (2,3) " + RESET + BLUE + "\\" + RESET); //hex(2,3)
         System.out.print(database.Hex24().getColor() + "       " + RESET + "/"); //hex(2,4)
         System.out.print(database.Hex25().getColor() + " (2,5) " + RESET + "\\"); //hex(2,5)
         System.out.println();
@@ -164,7 +164,7 @@ public class PrintMap {
         System.out.print("  \\" + database.Hex20().getColor() + "_____" + RESET + "/"); //hex(2,0)
         System.out.print(database.Hex21().getColor() + "         " + RESET + "\\"); //hex(2,1)
         System.out.print(database.Hex22().getColor() + "_____" + RESET + "/"); //hex(2,2)
-        System.out.print(database.Hex23().getColor() + "         " + RESET +  BLUE+"\\"+RESET); //hex(2,3)
+        System.out.print(database.Hex23().getColor() + "         " + RESET + BLUE + "\\" + RESET); //hex(2,3)
         System.out.print(database.Hex24().getColor() + "_____" + RESET + "/"); //hex(2,4)
         System.out.print(database.Hex25().getColor() + "         " + RESET + "\\"); //hex(2,5)
         System.out.println();
@@ -172,19 +172,19 @@ public class PrintMap {
         //line19
         System.out.print("        " + "\\" + database.Hex21().getColor() + "         " + RESET + "/" + "     "); //hex(2,1)
         System.out.print("\\" + database.Hex23().getColor() + "         " + RESET + "/" + "     "); //hex(2,3)
-        System.out.print("\\" + database.Hex25().getColor() + "         " + RESET +  BLUE+"/"+RESET); //hex(2,5)
+        System.out.print("\\" + database.Hex25().getColor() + "         " + RESET + BLUE + "/" + RESET); //hex(2,5)
         System.out.println();
 
         //line20
         System.out.print("         " + "\\" + database.Hex21().getColor() + "       " + RESET + "/" + "       "); //hex(2,1)
         System.out.print("\\" + database.Hex23().getColor() + "       " + RESET + "/" + "       "); //hex(2,3)
-        System.out.print("\\" + database.Hex25().getColor() + "       " + RESET +  BLUE+"/"+RESET); //hex(2,5)
+        System.out.print("\\" + database.Hex25().getColor() + "       " + RESET + BLUE + "/" + RESET); //hex(2,5)
         System.out.println();
 
         //line21
         System.out.print("          " + "\\" + database.Hex21().getColor() + "_____" + RESET + "/" + "         "); //hex(2,1)
         System.out.print("\\" + database.Hex23().getColor() + "_____" + RESET + "/" + "         "); //hex(2,3)
-        System.out.print("\\" + database.Hex25().getColor() + "_____" + RESET + BLUE+"/"+RESET); //hex(2,5)
+        System.out.print("\\" + database.Hex25().getColor() + "_____" + RESET + BLUE + "/" + RESET); //hex(2,5)
         System.out.println();
 
     }

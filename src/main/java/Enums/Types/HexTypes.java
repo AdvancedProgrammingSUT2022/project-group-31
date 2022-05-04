@@ -5,14 +5,14 @@ import Enums.Colors;
 
 public enum HexTypes {
 
-    DESERT("DSR", 0, 0, 0, -0.33, 1, new LandFeature[]{LandFeature.OASIS}, Colors.BACKGROUND_MAGENTA),
-    MEADOW("MDW", 2, 0, 0, -0.33, 1, new LandFeature[]{LandFeature.VALLEY, LandFeature.JUNGLE, LandFeature.MASSIVE_FOREST, LandFeature.LAGOON}, Colors.BACKGROUND_GREEN),
-    HILL("HIL", 0, 2, 0, +0.25, 2, new LandFeature[]{LandFeature.MASSIVE_FOREST, LandFeature.JUNGLE, LandFeature.VALLEY}, Colors.BACKGROUND_YELLOW),
+    DESERT("DSR", 0, 0, 0, -0.33, 1, new LandFeatureType[]{LandFeatureType.OASIS}, Colors.BACKGROUND_MAGENTA),
+    MEADOW("MDW", 2, 0, 0, -0.33, 1, new LandFeatureType[]{LandFeatureType.VALLEY, LandFeatureType.JUNGLE, LandFeatureType.MASSIVE_FOREST, LandFeatureType.LAGOON}, Colors.BACKGROUND_GREEN),
+    HILL("HIL", 0, 2, 0, +0.25, 2, new LandFeatureType[]{LandFeatureType.MASSIVE_FOREST, LandFeatureType.JUNGLE, LandFeatureType.VALLEY}, Colors.BACKGROUND_YELLOW),
     MOUNTAIN("MNT", 0, 0, 0, 0, -1, null, Colors.BACKGROUND_RED),
     OCEAN("OCN", 0, 0, 0, 0, -1, null, Colors.BACKGROUND_BLUE),
-    PLAIN("PLN", 1, 1, 0, -0.33, 1, new LandFeature[]{LandFeature.LAGOON, LandFeature.MASSIVE_FOREST, LandFeature.JUNGLE, LandFeature.VALLEY}, Colors.Background_Bright_Green),
-    SNOW("SNW", 0, 0, 0, -0.33, 1, new LandFeature[]{LandFeature.ICE}, Colors.Background_Bright_Blue),
-    TUNDRA("TUN", 1, 0, 0, -0.33, 1, new LandFeature[]{LandFeature.ICE}, Colors.Background_Bright_Cyan);
+    PLAIN("PLN", 1, 1, 0, -0.33, 1, new LandFeatureType[]{LandFeatureType.LAGOON, LandFeatureType.MASSIVE_FOREST, LandFeatureType.JUNGLE, LandFeatureType.VALLEY}, Colors.Background_Bright_Green),
+    SNOW("SNW", 0, 0, 0, -0.33, 1, new LandFeatureType[]{LandFeatureType.ICE}, Colors.Background_Bright_Blue),
+    TUNDRA("TUN", 1, 0, 0, -0.33, 1, new LandFeatureType[]{LandFeatureType.ICE}, Colors.Background_Bright_Cyan);
 
     private final String name;
     private final int food;
@@ -20,11 +20,11 @@ public enum HexTypes {
     private final int gold;
     private final double battleEfficiency;
     private final int MP;
-    private final LandFeature[] featuresCanHave;
+    private final LandFeatureType[] featuresCanHave;
     private final String color;
     Colors colors = Colors.getInstance();
 
-    HexTypes(String name, int food, int production, int gold, double battleEfficacy, int MP, LandFeature[] featuresCanHave, String color) {
+    HexTypes(String name, int food, int production, int gold, double battleEfficacy, int MP, LandFeatureType[] featuresCanHave, String color) {
 
         this.food = food;
         this.production = production;
@@ -56,7 +56,7 @@ public enum HexTypes {
         return MP;
     }
 
-    public LandFeature[] getFeaturesCanHave() {
+    public LandFeatureType[] getFeaturesCanHave() {
         return featuresCanHave;
     }
 
