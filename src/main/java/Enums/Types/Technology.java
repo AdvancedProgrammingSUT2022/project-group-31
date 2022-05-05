@@ -65,6 +65,10 @@ public enum Technology {
         return trophyCost;
     }
 
+    public String getName() {
+        return name;
+    }
+
     public Technology[] getNeededTechnology() {
         return neededTechnology;
     }
