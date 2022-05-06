@@ -8,7 +8,7 @@ import java.util.regex.Matcher;
 
 public class PlayGameMenu {
     public static void run(User user){
-        Hex.printMap();
+
         while (true) {
 
             Matcher matcher;
