@@ -30,8 +30,7 @@ public class Hex {
     private BonusResources bonusResources;
     private LuxuryResources luxuryResources;
     private StrategicResources strategicResources;
-
-
+    private City city = null;
 
 
     public Hex(int x, int y, String typeName, int food, int production, int gold, double battleEfficiency, int MP, String color) {
@@ -45,12 +44,19 @@ public class Hex {
         this.MP = MP;
         this.color = color;
 
-
-
     }
+
 
     //public Hex (HexTypes hexType,User user  )
 
+
+    public void setCity(City city) {
+        this.city = city;
+    }
+
+    public City getCity() {
+        return city;
+    }
 
     public void setTypeName(String typeName) {
         this.typeName = typeName;
@@ -156,7 +162,7 @@ public class Hex {
         return isRiverOnSouthWest;
     }
 
-    public void setHasRoad(boolean hasRoad) {
+    public void setRoad(boolean hasRoad) {
         this.hasRoad = hasRoad;
     }
 
@@ -176,7 +182,7 @@ public class Hex {
         this.owner = owner;
     }
 
-    public boolean isHasRoad() {
+    public boolean HasRoad() {
         return hasRoad;
     }
 

@@ -8,8 +8,8 @@ public class PrintSingleHex {
     String BLUE = "\033[44m";
     public static final String THE_BLUE = "\u001B[34m";
 
-    public void run() {
-        Hex hex = new Hex(0, 0, HexTypes.HILL.getName(), HexTypes.HILL.getFood(), HexTypes.HILL.getProduction(), HexTypes.HILL.getGold(), HexTypes.HILL.getBattleEfficacy(), HexTypes.HILL.getMP(), HexTypes.HILL.getColor());
+    public void run(Hex hex) {
+
         hex.setRiverOnNorthWest(true);
         hex.setRiverOnSouthEast(true);
         hex.setRiverOnSouth(true);

@@ -1,22 +1,16 @@
 import Controller.AddTechnology;
-import Enums.Types.Technology;
-import model.Database;
-import model.User;
+import Enums.Types.HexTypes;
+import model.Hex;
 import view.PrintMap;
 import view.PrintSingleHex;
-
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
         PrintMap printMap = new PrintMap();
         PrintSingleHex printSingleHex = new PrintSingleHex();
-        printMap.run();
+      //  printMap.run();
         System.out.println("\n\n\n\n\n\n");
-        //printSingleHex.run();
+        printSingleHex.run(new Hex(0, 0, HexTypes.HILL.getShortName(), HexTypes.HILL.getFood(), HexTypes.HILL.getProduction(), HexTypes.HILL.getGold(), HexTypes.HILL.getBattleEfficacy(), HexTypes.HILL.getMP(), HexTypes.HILL.getColor()));
         AddTechnology addTechnology =  new AddTechnology();
      //   addTechnology.run();
 //
