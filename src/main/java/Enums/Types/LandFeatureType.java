@@ -8,6 +8,7 @@ public enum LandFeatureType {
     LAGOON(-1, 0, 0, -0.33, 2),
     OASIS(3, 0, 1, -0.33, 1);
 
+
     private final int food;
     private final int production;
     private final int gold;
