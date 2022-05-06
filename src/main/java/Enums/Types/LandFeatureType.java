@@ -1,6 +1,6 @@
 package Enums.Types;
 
-public enum LandFeature {
+public enum LandFeatureType {
     VALLEY(2, 0, 0, -0.33, 1 ),
     JUNGLE(1, 1, 0, 0.25, 2 ),
     ICE(0, 0, 0, 0, -1),
@@ -13,9 +13,9 @@ public enum LandFeature {
     private final int gold;
     private final double battleEfficacy;
     private final int MP;
-    private HEX[] canBeFindOn;
+    private HexTypes[] canBeFindOn;
 
-    LandFeature(int food, int production, int gold, double battleEfficacy, int MP) {
+    LandFeatureType(int food, int production, int gold, double battleEfficacy, int MP) {
         this.food = food;
         this.production = production;
         this.gold = gold;
@@ -45,7 +45,7 @@ public enum LandFeature {
         return MP;
     }
 
-    public HEX[] getCanBeFindOn() {
+    public HexTypes[] getCanBeFindOn() {
         return canBeFindOn;
     }
 }

@@ -1,15 +1,13 @@
 package Enums.Types;
 
-import Enums.Types.Improvement;
-
 public enum BonusResources {
-    BANANA(1, 0, 0, Improvement.FARMING),
-    COW(1, 0, 0, Improvement.PASTURE),
-    GAZELLE(1, 0, 0, Improvement.CAMP),
-    SHEEP(2, 0, 0, Improvement.PASTURE),
-    WHEAT(1, 0, 0, Improvement.FARM);
+    BANANA(1, 0, 0, ImprovementTypes.FARMING),
+    COW(1, 0, 0, ImprovementTypes.PASTURE),
+    GAZELLE(1, 0, 0, ImprovementTypes.CAMP),
+    SHEEP(2, 0, 0, ImprovementTypes.PASTURE),
+    WHEAT(1, 0, 0, ImprovementTypes.FARM);
 
-    BonusResources(int food, int production, int gold, Improvement neededImprovement) {
+    BonusResources(int food, int production, int gold, ImprovementTypes neededImprovement) {
         this.food = food;
         this.gold = gold;
         this.neededImprovement = neededImprovement;
@@ -19,7 +17,7 @@ public enum BonusResources {
     private final int food;
     private final int production;
     private final int gold;
-    private final Improvement neededImprovement;
+    private final ImprovementTypes neededImprovement;
 
     public int getFood() {
         return food;
@@ -33,7 +31,7 @@ public enum BonusResources {
         return gold;
     }
 
-    public Improvement getNeededImprovement() {
+    public ImprovementTypes getNeededImprovement() {
         return neededImprovement;
     }
 }

@@ -8,7 +8,8 @@ public enum CombatType {
     CIVILIAN,
     SIEGE,
     GUNPOWDER,
-    ARMORED
+    ARMORED,
+    ;
 
 
 }

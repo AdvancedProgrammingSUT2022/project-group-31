@@ -1,12 +1,15 @@
 package model;
 
+import Enums.Types.Technology;
+
 import java.util.ArrayList;
 
 public class User {
-    String username;
-    String password;
-    String nickname;
-    int score;
+    private String username;
+    private String password;
+    private String nickname;
+    private int score;
+    private ArrayList<Technology> achievedTechnologies = new ArrayList<>();
 
 
     public User(String username, String password, String nickname) {
@@ -48,5 +51,17 @@ public class User {
 
     public void setScore(int score) {
         this.score = score;
+    }
+
+    public void addTechnology(Technology technology) {
+        achievedTechnologies.add(technology);
+    }
+
+    public void setAchievedTechnologies(ArrayList<Technology> achievedTechnologies) {
+        this.achievedTechnologies = achievedTechnologies;
+    }
+
+    public ArrayList<Technology> getAchievedTechnologies() {
+        return achievedTechnologies;
     }
 }
