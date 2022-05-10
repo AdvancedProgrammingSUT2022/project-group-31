@@ -49,6 +49,7 @@ public enum Technology {
     ELECTRICITY(1900, new Technology[]{BIOLOGY, STEAM_POWER}, "ELECTRICITY"),
     RADIO(2200, new Technology[]{ELECTRICITY}, "RADIO"),
     TELEGRAPH(2200, new Technology[]{ELECTRICITY}, "TELEGRAPH"),
+    COMBUSTION(2200,new Technology[]{REPLACEABLE_PARTS,RAILROAD,DYNAMITE},"COMBUSTION")
     ;
     private final int trophyCost;
     private final Technology[] neededTechnology;
