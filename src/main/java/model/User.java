@@ -9,6 +9,7 @@ public class User {
     private String password;
     private String nickname;
     private int score;
+    private int gold = 0;
     private ArrayList<Technology> achievedTechnologies = new ArrayList<>();
 
 
