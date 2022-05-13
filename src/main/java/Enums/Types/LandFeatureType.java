@@ -1,9 +1,8 @@
 package Enums.Types;
 
 public enum LandFeatureType {
-    VALLEY(2, 0, 0, -0.33, 1 ),
-    JUNGLE(1, 1, 0, 0.25, 2 ),
-    ICE(0, 0, 0, 0, -1),
+    VALLEY(2, 0, 0, -0.33, 1),
+    JUNGLE(1, 1, 0, 0.25, 2),
     MASSIVE_FOREST(1, -1, 0, 0.25, 2),
     LAGOON(-1, 0, 0, -0.33, 2),
     OASIS(3, 0, 1, -0.33, 1);

@@ -1,7 +1,6 @@
 package model;
 
-import Enums.Types.HexTypes;
-import Enums.Types.Technology;
+import Enums.Types.*;
 
 import java.util.ArrayList;
 
@@ -11,24 +10,44 @@ public class Database {
     private Database() {
 
 
-        map.add(hex00 = new Hex(0, 0, HexTypes.HILL.getShortName(), HexTypes.HILL.getFood(), HexTypes.HILL.getProduction(), HexTypes.HILL.getGold(), HexTypes.HILL.getBattleEfficacy(), HexTypes.HILL.getMP(), HexTypes.HILL.getColor()));
-        map.add(hex01 = new Hex(0, 1, HexTypes.DESERT.getShortName(), HexTypes.DESERT.getFood(), HexTypes.DESERT.getProduction(), HexTypes.DESERT.getGold(), HexTypes.DESERT.getBattleEfficacy(), HexTypes.DESERT.getMP(), HexTypes.DESERT.getColor()));
-        map.add(hex02 = new Hex(0, 2, HexTypes.PLAIN.getShortName(), HexTypes.PLAIN.getFood(), HexTypes.PLAIN.getProduction(), HexTypes.PLAIN.getGold(), HexTypes.PLAIN.getBattleEfficacy(), HexTypes.PLAIN.getMP(), HexTypes.PLAIN.getColor()));
-        map.add(hex03 = new Hex(0, 3, HexTypes.SNOW.getShortName(), HexTypes.SNOW.getFood(), HexTypes.SNOW.getProduction(), HexTypes.SNOW.getGold(), HexTypes.SNOW.getBattleEfficacy(), HexTypes.SNOW.getMP(), HexTypes.SNOW.getColor()));
-        map.add(hex04 = new Hex(0, 4, HexTypes.TUNDRA.getShortName(), HexTypes.TUNDRA.getFood(), HexTypes.TUNDRA.getProduction(), HexTypes.TUNDRA.getGold(), HexTypes.TUNDRA.getBattleEfficacy(), HexTypes.TUNDRA.getMP(), HexTypes.TUNDRA.getColor()));
-        map.add(hex05 = new Hex(0, 5, HexTypes.HILL.getShortName(), HexTypes.HILL.getFood(), HexTypes.HILL.getProduction(), HexTypes.HILL.getGold(), HexTypes.HILL.getBattleEfficacy(), HexTypes.HILL.getMP(), HexTypes.HILL.getColor()));
-        map.add(hex10 = new Hex(1, 0, HexTypes.MEADOW.getShortName(), HexTypes.MEADOW.getFood(), HexTypes.MEADOW.getProduction(), HexTypes.MEADOW.getGold(), HexTypes.MEADOW.getBattleEfficacy(), HexTypes.MEADOW.getMP(), HexTypes.MEADOW.getColor()));
-        map.add(hex11 = new Hex(1, 1, HexTypes.OCEAN.getShortName(), HexTypes.OCEAN.getFood(), HexTypes.OCEAN.getProduction(), HexTypes.OCEAN.getGold(), HexTypes.OCEAN.getBattleEfficacy(), HexTypes.OCEAN.getMP(), HexTypes.OCEAN.getColor()));
-        map.add(hex12 = new Hex(1, 2, HexTypes.HILL.getShortName(), HexTypes.HILL.getFood(), HexTypes.HILL.getProduction(), HexTypes.HILL.getGold(), HexTypes.HILL.getBattleEfficacy(), HexTypes.HILL.getMP(), HexTypes.HILL.getColor()));
-        map.add(hex13 = new Hex(1, 3, HexTypes.MOUNTAIN.getShortName(), HexTypes.MOUNTAIN.getFood(), HexTypes.MOUNTAIN.getProduction(), HexTypes.MOUNTAIN.getGold(), HexTypes.MOUNTAIN.getBattleEfficacy(), HexTypes.MOUNTAIN.getMP(), HexTypes.MOUNTAIN.getColor()));
-        map.add(hex14 = new Hex(1, 4, HexTypes.PLAIN.getShortName(), HexTypes.PLAIN.getFood(), HexTypes.PLAIN.getProduction(), HexTypes.PLAIN.getGold(), HexTypes.PLAIN.getBattleEfficacy(), HexTypes.PLAIN.getMP(), HexTypes.PLAIN.getColor()));
-        map.add(hex15 = new Hex(1, 5, HexTypes.SNOW.getShortName(), HexTypes.SNOW.getFood(), HexTypes.SNOW.getProduction(), HexTypes.SNOW.getGold(), HexTypes.SNOW.getBattleEfficacy(), HexTypes.SNOW.getMP(), HexTypes.SNOW.getColor()));
-        map.add(hex20 = new Hex(2, 0, HexTypes.TUNDRA.getShortName(), HexTypes.TUNDRA.getFood(), HexTypes.TUNDRA.getProduction(), HexTypes.TUNDRA.getGold(), HexTypes.TUNDRA.getBattleEfficacy(), HexTypes.TUNDRA.getMP(), HexTypes.TUNDRA.getColor()));
-        map.add(hex21 = new Hex(2, 1, HexTypes.PLAIN.getShortName(), HexTypes.PLAIN.getFood(), HexTypes.PLAIN.getProduction(), HexTypes.PLAIN.getGold(), HexTypes.PLAIN.getBattleEfficacy(), HexTypes.PLAIN.getMP(), HexTypes.PLAIN.getColor()));
-        map.add(hex22 = new Hex(2, 2, HexTypes.PLAIN.getShortName(), HexTypes.PLAIN.getFood(), HexTypes.PLAIN.getProduction(), HexTypes.PLAIN.getGold(), HexTypes.PLAIN.getBattleEfficacy(), HexTypes.PLAIN.getMP(), HexTypes.PLAIN.getColor()));
-        map.add(hex23 = new Hex(2, 3, HexTypes.DESERT.getShortName(), HexTypes.DESERT.getFood(), HexTypes.DESERT.getProduction(), HexTypes.DESERT.getGold(), HexTypes.DESERT.getBattleEfficacy(), HexTypes.DESERT.getMP(), HexTypes.DESERT.getColor()));
-        map.add(hex24 = new Hex(2, 4, HexTypes.HILL.getShortName(), HexTypes.HILL.getFood(), HexTypes.HILL.getProduction(), HexTypes.HILL.getGold(), HexTypes.HILL.getBattleEfficacy(), HexTypes.HILL.getMP(), HexTypes.HILL.getColor()));
-        map.add(hex25 = new Hex(2, 5, HexTypes.MEADOW.getShortName(), HexTypes.MEADOW.getFood(), HexTypes.MEADOW.getProduction(), HexTypes.MEADOW.getGold(), HexTypes.MEADOW.getBattleEfficacy(), HexTypes.MEADOW.getMP(), HexTypes.MEADOW.getColor()));
+        map.add(hex00 = new Hex(HexTypes.HILL, 0, 0));
+        addFeatureToHex(hex00, LandFeatureType.MASSIVE_FOREST);
+        map.add(hex01 = new Hex(HexTypes.DESERT, 0, 1));
+        addFeatureToHex(hex01, LandFeatureType.OASIS);
+        map.add(hex02 = new Hex(HexTypes.PLAIN, 0, 2));
+        addFeatureToHex(hex02, LandFeatureType.JUNGLE);
+        map.add(hex03 = new Hex(HexTypes.SNOW, 0, 3));
+        addFeatureToHex(hex04, null);
+        map.add(hex04 = new Hex(HexTypes.TUNDRA, 0, 4));
+        addFeatureToHex(hex04, LandFeatureType.JUNGLE);
+        map.add(hex05 = new Hex(HexTypes.HILL, 0, 5));
+        addFeatureToHex(hex05, LandFeatureType.JUNGLE);
+        map.add(hex10 = new Hex(HexTypes.MEADOW, 1, 0));
+        addFeatureToHex(hex10, LandFeatureType.LAGOON);
+        map.add(hex11 = new Hex(HexTypes.OCEAN, 1, 1));
+        addFeatureToHex(hex11, null);
+        map.add(hex12 = new Hex(HexTypes.HILL, 1, 2));
+        addFeatureToHex(hex12, LandFeatureType.MASSIVE_FOREST);
+        map.add(hex13 = new Hex(HexTypes.MOUNTAIN, 1, 3));
+        addFeatureToHex(hex12, null);
+        map.add(hex14 = new Hex(HexTypes.PLAIN, 1, 4));
+        addFeatureToHex(hex14, LandFeatureType.MASSIVE_FOREST);
+        map.add(hex15 = new Hex(HexTypes.SNOW, 1, 5));
+        addFeatureToHex(hex15, null);
+        map.add(hex20 = new Hex(HexTypes.TUNDRA, 2, 0));
+        addFeatureToHex(hex20, LandFeatureType.JUNGLE);
+        map.add(hex21 = new Hex(HexTypes.PLAIN, 2, 1));
+        addFeatureToHex(hex21, LandFeatureType.JUNGLE);
+        map.add(hex22 = new Hex(HexTypes.PLAIN, 2, 2));
+        addFeatureToHex(hex22, LandFeatureType.MASSIVE_FOREST);
+        map.add(hex23 = new Hex(HexTypes.DESERT, 2, 3));
+        addFeatureToHex(hex23, LandFeatureType.VALLEY);
+        map.add(hex24 = new Hex(HexTypes.HILL, 2, 4));
+        addFeatureToHex(hex24, LandFeatureType.JUNGLE);
+        map.add(hex25 = new Hex(HexTypes.SNOW, 2, 5));
+        addFeatureToHex(hex25, null);
+
+
         allTechnologies.add(Technology.AGRICULTURE);
         allTechnologies.add(Technology.ANIMAL_HUSBANDRY);
         allTechnologies.add(Technology.ARCHERY);
@@ -75,6 +94,20 @@ public class Database {
         allTechnologies.add(Technology.ELECTRICITY);
         allTechnologies.add(Technology.RADIO);
         allTechnologies.add(Technology.TELEGRAPH);
+
+
+        setResourceToHex(hex00, LuxuryResources.COTTON, StrategicResources.COAL, BonusResources.COW);
+
+    }
+
+    private void addFeatureToHex(Hex hex, LandFeatureType landFeatureType) {
+        hex.setLandFeatureType(landFeatureType);
+    }
+
+    private void setResourceToHex(Hex hex, LuxuryResources luxuryResource, StrategicResources strategicResource, BonusResources bonusResource) {
+        hex.setBonusResources(bonusResource);
+        hex.setLuxuryResources(luxuryResource);
+        hex.setStrategicResources(strategicResource);
     }
 
     public static Database getInstance() {
@@ -240,6 +273,9 @@ public class Database {
 
     public Hex getHexByPosition(int x, int y) {
 
+        for (Hex hex : map) {
+            if (hex.getX() == x && hex.getY() == y) return hex;
+        }
         return null;
     }
 }
