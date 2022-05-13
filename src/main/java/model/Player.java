@@ -14,7 +14,12 @@ public class Player {
     public void setUnits(Unit unit) {
         units.add(unit);
     }
+
     public ArrayList<Unit> getUnits() {
         return units;
+    }
+
+    public void removeUnit(Unit unit){
+        units.remove(unit);
     }
 }
