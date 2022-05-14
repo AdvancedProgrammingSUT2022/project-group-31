@@ -27,9 +27,11 @@ public enum Commands {
     USER_LOGIN4("user login -u (?<username>[a-zA-Z]+) -p (?<password>[a-zA-Z]+)"),
 
     USER_LOGOUT("user logout"),
+
     PLAY_GAME2("play game --player1 (?<P1Username>[a-zA-Z]+) --player2 (?<P2Username>[a-zA-Z]+)"),
     PLAT_GAME3("play game --player1 (?<P1Username>[a-zA-Z]+) --player2 (?<P2Username>[a-zA-Z]+) --player3 (?<P3Username>[a-zA-Z]+)"),
     PLAT_GAME4("play game --player1 (?<P1Username>[a-zA-Z]+) --player2 (?<P2Username>[a-zA-Z]+) --player3 (?<P3Username>[a-zA-Z]+) --player4 (?<P4Username>[a-zA-Z]+)"),
+
     CHANGE_NICKNAME("profile change --nickname (?<newNickname>[a-zA-Z]+)"),
     CHANGE_PASSWORD("profile change --password --current (?<currentPassword>[a-zA-Z]+) --new (?<newPassword>[a-zA-Z]+)");
 

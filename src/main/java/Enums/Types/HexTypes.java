@@ -14,6 +14,7 @@ public enum HexTypes {
     SNOW("SNOW", "SNW", 0, 0, 0, -0.33, 1, Colors.Background_Bright_Blue),
     TUNDRA("TUNDRA", "TUN", 1, 0, 0, -0.33, 1, Colors.Background_Bright_Cyan);
 
+
     private final String shortName;
     private final String fullName;
     private final int food;
