@@ -2,6 +2,8 @@ package model;
 
 import Enums.Types.*;
 
+import java.util.ArrayList;
+
 public class Hex {
     private String color;
     private String shortName;
@@ -30,6 +32,7 @@ public class Hex {
     private LuxuryResources luxuryResources = null;
     private StrategicResources strategicResources = null;
     private City city = null;
+    private ArrayList<Hex> hexes=new ArrayList<>();
 
 
     public Hex(HexTypes hexTypes, int x, int y, StrategicResources strategicResources, LuxuryResources luxuryResources, BonusResources bonusResources) {
@@ -48,7 +51,7 @@ public class Hex {
         this.MP = hexTypes.getMP();
         this.color = hexTypes.getColor();
         this.fullName = hexTypes.getFullName();
-
+        hexes.add(this);
 
     }
 
@@ -249,4 +252,14 @@ public class Hex {
     public int getY() {
         return y;
     }
+
+    public Hex getHexByXandY(int x, int y) {
+        for (Hex hex : hexes) {
+            if (hex.getX() == x && hex.getY() == y) {
+                return hex;
+            }
+        }
+    return null;
+    }
+
 }
