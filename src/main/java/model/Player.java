@@ -21,4 +21,8 @@ public class Player {
     public ArrayList<Unit> getUnits() {
         return units;
     }
+
+    public void removeUnit(Unit unit){
+        units.remove(unit);
+    }
 }
