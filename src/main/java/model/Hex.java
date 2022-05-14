@@ -1,13 +1,12 @@
 package model;
 
-import Enums.Types.BonusResources;
-import Enums.Types.LandFeatureType;
-import Enums.Types.LuxuryResources;
-import Enums.Types.StrategicResources;
+import Enums.Types.*;
 
 public class Hex {
     private String color;
-    private String typeName;
+    private String shortName;
+    private String fullName;
+    private HexTypes hexTypes;
     private LandFeatureType landFeatureType;
     private int x;
     private int y;
@@ -27,22 +26,29 @@ public class Hex {
     private MilitaryUnit militaryUnit = null;
     private Improvement improvement = null;
     private User owner = null;
-    private BonusResources bonusResources;
-    private LuxuryResources luxuryResources;
-    private StrategicResources strategicResources;
+    private BonusResources bonusResources = null;
+    private LuxuryResources luxuryResources = null;
+    private StrategicResources strategicResources = null;
     private City city = null;
 
 
-    public Hex(int x, int y, String typeName, int food, int production, int gold, double battleEfficiency, int MP, String color) {
-        this.typeName = typeName;
+    public Hex(HexTypes hexTypes, int x, int y, StrategicResources strategicResources, LuxuryResources luxuryResources, BonusResources bonusResources) {
+
+
         this.x = x;
         this.y = y;
-        this.food = food;
-        this.production = production;
-        this.gold = gold;
-        this.battleEfficiency = battleEfficiency;
-        this.MP = MP;
-        this.color = color;
+        this.luxuryResources = luxuryResources;
+        this.strategicResources = strategicResources;
+        this.bonusResources = bonusResources;
+        this.shortName = hexTypes.getShortName();
+        this.food = hexTypes.getFood();
+        this.production = hexTypes.getProduction();
+        this.gold = hexTypes.getGold();
+        this.battleEfficiency = hexTypes.getBattleEfficacy();
+        this.MP = hexTypes.getMP();
+        this.color = hexTypes.getColor();
+        this.fullName = hexTypes.getFullName();
+
 
     }
 
@@ -58,8 +64,8 @@ public class Hex {
         return city;
     }
 
-    public void setTypeName(String typeName) {
-        this.typeName = typeName;
+    public void setShortName(String shortName) {
+        this.shortName = shortName;
     }
 
     public void setFood(int food) {
@@ -106,12 +112,46 @@ public class Hex {
         isRiverOnSouthEast = riverOnSouthEast;
     }
 
+    public void setLandFeatureType(LandFeatureType landFeatureType) {
+
+        this.landFeatureType = landFeatureType;
+        this.food += landFeatureType.getFood();
+        this.production += landFeatureType.getProduction();
+        this.gold += landFeatureType.getGold();
+        this.battleEfficiency += landFeatureType.getBattleEfficacy();
+        //  this.MP
+    }
+
+    public void setX(int x) {
+        this.x = x;
+    }
+
+    public void setY(int y) {
+        this.y = y;
+    }
+
+    public void setHasRoad(boolean hasRoad) {
+        this.hasRoad = hasRoad;
+    }
+
+    public void setBonusResources(BonusResources bonusResources) {
+        this.bonusResources = bonusResources;
+    }
+
+    public void setLuxuryResources(LuxuryResources luxuryResources) {
+        this.luxuryResources = luxuryResources;
+    }
+
+    public void setStrategicResources(StrategicResources strategicResources) {
+        this.strategicResources = strategicResources;
+    }
+
     public void setRiverOnSouthWest(boolean riverOnSouthWest) {
         isRiverOnSouthWest = riverOnSouthWest;
     }
 
-    public String getTypeName() {
-        return typeName;
+    public String getShortName() {
+        return shortName;
     }
 
     public int getFood() {

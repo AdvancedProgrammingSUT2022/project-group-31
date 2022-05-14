@@ -3,7 +3,7 @@ package model;
 import Enums.Types.UnitsFeatures;
 
 public class Unit {
-//setller and worker monde...
+// TODO setller and worker monde...
     private UnitsFeatures unitType;
     private Hex positionByHex;
     private Player owner;
