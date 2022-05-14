@@ -10,41 +10,58 @@ public class Database {
     private Database() {
 
 
-        map.add(hex00 = new Hex(HexTypes.HILL, 0, 0));
+        map.add(hex00 = new Hex(HexTypes.HILL, 0, 0, null, LuxuryResources.COLOR, BonusResources.SHEEP));
         addFeatureToHex(hex00, LandFeatureType.MASSIVE_FOREST);
-        map.add(hex01 = new Hex(HexTypes.DESERT, 0, 1));
+
+        map.add(hex01 = new Hex(HexTypes.DESERT, 0, 1, StrategicResources.IRON, LuxuryResources.COTTON, null));
         addFeatureToHex(hex01, LandFeatureType.OASIS);
-        map.add(hex02 = new Hex(HexTypes.PLAIN, 0, 2));
+
+        map.add(hex02 = new Hex(HexTypes.PLAIN, 0, 2, StrategicResources.HORSE, LuxuryResources.SILK, BonusResources.BANANA));
         addFeatureToHex(hex02, LandFeatureType.JUNGLE);
-        map.add(hex03 = new Hex(HexTypes.SNOW, 0, 3));
+
+        map.add(hex03 = new Hex(HexTypes.SNOW, 0, 3, null, null, null));
         addFeatureToHex(hex04, null);
-        map.add(hex04 = new Hex(HexTypes.TUNDRA, 0, 4));
+
+        map.add(hex04 = new Hex(HexTypes.TUNDRA, 0, 4, StrategicResources.HORSE, LuxuryResources.FUR, BonusResources.GAZELLE));
         addFeatureToHex(hex04, LandFeatureType.JUNGLE);
-        map.add(hex05 = new Hex(HexTypes.HILL, 0, 5));
+
+        map.add(hex05 = new Hex(HexTypes.HILL, 0, 5, StrategicResources.COAL, LuxuryResources.SUGAR, BonusResources.BANANA));
         addFeatureToHex(hex05, LandFeatureType.JUNGLE);
-        map.add(hex10 = new Hex(HexTypes.MEADOW, 1, 0));
+
+        map.add(hex10 = new Hex(HexTypes.MEADOW, 1, 0, null, LuxuryResources.GEMSTONE, BonusResources.COW));
         addFeatureToHex(hex10, LandFeatureType.LAGOON);
-        map.add(hex11 = new Hex(HexTypes.OCEAN, 1, 1));
+
+        map.add(hex11 = new Hex(HexTypes.OCEAN, 1, 1, null, null, null));
         addFeatureToHex(hex11, null);
-        map.add(hex12 = new Hex(HexTypes.HILL, 1, 2));
+
+        map.add(hex12 = new Hex(HexTypes.HILL, 1, 2, StrategicResources.IRON, LuxuryResources.GOLD, BonusResources.SHEEP));
         addFeatureToHex(hex12, LandFeatureType.MASSIVE_FOREST);
-        map.add(hex13 = new Hex(HexTypes.MOUNTAIN, 1, 3));
+
+        map.add(hex13 = new Hex(HexTypes.MOUNTAIN, 1, 3, null, null, null));
         addFeatureToHex(hex12, null);
-        map.add(hex14 = new Hex(HexTypes.PLAIN, 1, 4));
+
+        map.add(hex14 = new Hex(HexTypes.PLAIN, 1, 4, StrategicResources.COAL, null, BonusResources.SHEEP));
         addFeatureToHex(hex14, LandFeatureType.MASSIVE_FOREST);
-        map.add(hex15 = new Hex(HexTypes.SNOW, 1, 5));
+
+        map.add(hex15 = new Hex(HexTypes.SNOW, 1, 5, null, null, null));
         addFeatureToHex(hex15, null);
-        map.add(hex20 = new Hex(HexTypes.TUNDRA, 2, 0));
+
+        map.add(hex20 = new Hex(HexTypes.TUNDRA, 2, 0, StrategicResources.HORSE, null, BonusResources.GAZELLE));
         addFeatureToHex(hex20, LandFeatureType.JUNGLE);
-        map.add(hex21 = new Hex(HexTypes.PLAIN, 2, 1));
+
+        map.add(hex21 = new Hex(HexTypes.PLAIN, 2, 1, null, LuxuryResources.FUMIGATION, BonusResources.SHEEP));
         addFeatureToHex(hex21, LandFeatureType.JUNGLE);
-        map.add(hex22 = new Hex(HexTypes.PLAIN, 2, 2));
+
+        map.add(hex22 = new Hex(HexTypes.PLAIN, 2, 2, StrategicResources.HORSE, LuxuryResources.TUSK, null));
         addFeatureToHex(hex22, LandFeatureType.MASSIVE_FOREST);
-        map.add(hex23 = new Hex(HexTypes.DESERT, 2, 3));
+
+        map.add(hex23 = new Hex(HexTypes.DESERT, 2, 3, StrategicResources.IRON, LuxuryResources.GOLD, BonusResources.WHEAT));
         addFeatureToHex(hex23, LandFeatureType.VALLEY);
-        map.add(hex24 = new Hex(HexTypes.HILL, 2, 4));
+
+        map.add(hex24 = new Hex(HexTypes.HILL, 2, 4, StrategicResources.IRON, LuxuryResources.MARBLE, BonusResources.BANANA));
         addFeatureToHex(hex24, LandFeatureType.JUNGLE);
-        map.add(hex25 = new Hex(HexTypes.SNOW, 2, 5));
+
+        map.add(hex25 = new Hex(HexTypes.SNOW, 2, 5, null, null, null));
         addFeatureToHex(hex25, null);
 
 
@@ -95,8 +112,6 @@ public class Database {
         allTechnologies.add(Technology.RADIO);
         allTechnologies.add(Technology.TELEGRAPH);
 
-
-        setResourceToHex(hex00, LuxuryResources.COTTON, StrategicResources.COAL, BonusResources.COW);
 
     }
 

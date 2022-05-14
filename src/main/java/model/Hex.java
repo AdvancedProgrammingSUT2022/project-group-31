@@ -32,11 +32,14 @@ public class Hex {
     private City city = null;
 
 
-    public Hex(HexTypes hexTypes, int x, int y) {
+    public Hex(HexTypes hexTypes, int x, int y, StrategicResources strategicResources, LuxuryResources luxuryResources, BonusResources bonusResources) {
 
 
         this.x = x;
         this.y = y;
+        this.luxuryResources = luxuryResources;
+        this.strategicResources = strategicResources;
+        this.bonusResources = bonusResources;
         this.shortName = hexTypes.getShortName();
         this.food = hexTypes.getFood();
         this.production = hexTypes.getProduction();
@@ -113,10 +116,10 @@ public class Hex {
 
         this.landFeatureType = landFeatureType;
         this.food += landFeatureType.getFood();
-        this.production+= landFeatureType.getProduction();
-        this.gold+= landFeatureType.getGold();
-        this.battleEfficiency+= landFeatureType.getBattleEfficacy();
-      //  this.MP
+        this.production += landFeatureType.getProduction();
+        this.gold += landFeatureType.getGold();
+        this.battleEfficiency += landFeatureType.getBattleEfficacy();
+        //  this.MP
     }
 
     public void setX(int x) {
