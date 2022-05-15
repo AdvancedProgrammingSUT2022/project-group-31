@@ -38,7 +38,7 @@ public class Player {
         return units;
     }
 
-<<<<<<<<< Temporary merge branch 1
+
     public ArrayList<City> getCities() {
         return cities;
     }
