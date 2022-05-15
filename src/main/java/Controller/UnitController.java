@@ -1,5 +1,6 @@
 package Controller;
 
+import Enums.Types.CombatType;
 import model.City;
 import model.Hex;
 import model.Player;
@@ -8,14 +9,62 @@ import model.Unit;
 public class UnitController {
 
 
-    public void move(Unit unit, Hex destination, Hex origin) {
-        return;
+
+
+    ///////////////////////////////
+    //TODO hesab kardan river
+    public String move(Unit unit, Hex destination) {
+
+       if (isMovePossible(unit,destination)){
+           unit.setPositionByHex(destination);
+           return "move is done";
+       }
+
+            return "move is     not possible";
     }
 
-    public boolean isMovePossible(Unit unit, Hex destination, Hex origin) {
+    public boolean isMovePossible(Unit unit, Hex destination) {
+       double xOrigin=unit.getPositionByHex().getX()-Math.floor(unit.getPositionByHex().getY()/2);
+       double yOrigin=unit.getPositionByHex().getY();
+       double xDestination=destination.getX()-Math.floor(destination.getY()/2);
+       double yDestination=destination.getY();
+       double xDistance=xDestination-xOrigin;
+       double yDistance=yDestination-yOrigin;
+       double distance=Math.max(Math.abs(xDistance),Math.abs(yDistance));
+       if (Math.abs(xDistance+yDistance)>distance){
+           distance=Math.abs(xDistance+yDistance);
+       }
+
+
+        if (unit.getMP()!=0){
+            if (unit.getUnitType().getCombatType()==CombatType.CIVILIAN){
+                if (destination.getUnMilitaryUnit()==null){
+                    if (distance > unit.getMP()){
+                        return false;
+                    }else {
+                        unit.setMP((int) (unit.getMP()-distance));
+                        return true;
+                    }
+
+                }
+                    return false;
+            }else{
+                if (destination.getMilitaryUnit()==null) {
+                    if (distance > unit.getMP()) {
+                        return false;
+                    } else {
+                        unit.setMP((int) (unit.getMP() - distance));
+                        return true;
+                    }
+                }
+                    return false;
+            }
+
+
+        }
         return false;
     }
-
+//////////////////////////////
 
 
     //////////////////////////////////////
@@ -105,27 +154,80 @@ public class UnitController {
 
 
 
-    public void sleep (Unit unit){
-
+    public String sleep (Unit unit){
+        unit.setSleep(true);
+        return "unit is sleeping";
     }
-     public void alert (Unit unit){
+     public String alert (Unit unit){
 
-     }
-     public void garrison (Unit unit){
+        Hex hex=unit.getPositionByHex();
+        int x=unit.getPositionByHex().getX();
+        int y=unit.getPositionByHex().getY();
 
+        if (y%2==0){
+            if (hex.getHexByXandY(x-1,y).getMilitaryUnit()==null || hex.getHexByXandY(x+1,y).getMilitaryUnit()==null){
+                unit.setSleep(true);
+                return "unit is on alert";
+            } else if (hex.getHexByXandY(x-1,y-1).getMilitaryUnit()==null || hex.getHexByXandY(x-1,y+1).getMilitaryUnit()==null){
+               unit.setSleep(true);
+                return "unit is on alert";
+            } else if (hex.getHexByXandY(x,y-1).getMilitaryUnit()==null || hex.getHexByXandY(x,y+1).getMilitaryUnit()==null){
+                unit.setSleep(true);
+                return "unit is on alert";
+            }else{
+                unit.setSleep(false);
+                return "unit isn't on alert";
+            }
+
+        }else{
+
+            if (hex.getHexByXandY(x-1,y).getMilitaryUnit()==null || hex.getHexByXandY(x+1,y).getMilitaryUnit()==null){
+                unit.setSleep(true);
+                return "unit is on alert";
+            }else if (hex.getHexByXandY(x,y-1).getMilitaryUnit()==null || hex.getHexByXandY(x,y+1).getMilitaryUnit()==null){
+                unit.setSleep(true);
+                return "unit is on alert";
+            }else if (hex.getHexByXandY(x+1,y-1).getMilitaryUnit()==null || hex.getHexByXandY(x-1,y+1).getMilitaryUnit()==null){
+                unit.setSleep(true);
+                return "unit is on alert";
+            }else{
+                unit.setSleep(false);
+                return "unit isn't on alert";
+            }
+        }
      }
+
+     public String garrison (Unit unit){
+        Hex hex=unit.getPositionByHex();
+        if (hex.getCity()!=null){
+            unit.setCombatStrength(unit.getCombatStrength()+1);
+            return "CombatStrength increased";
+        }
+        return "unit's Hex doesn't have City";
+     }
+
      public void fortify (Unit unit){
-
+    //TODO defensive bonus
      }
+
      public  void pillage (Unit unit){
-
+  //TODO bayad aval improvment kamel shavad baray zadan in bakhshash
      }
-     public void foundCity (Unit unit){
 
+     public String foundCity (Unit unit, City city){
+        //TODO chejori moshakahs konim in unit worker ast. nomone avaliye:
+
+         if (unit.getUnitType().getCombatType()==CombatType.CIVILIAN){
+             unit.buildCity(unit,city);
+             return "City created";
+         }
+         return "foundCity was not successful";
      }
+
      public void delete (Unit unit){
-
-     }
+      Player player=unit.getOwner();
+      unit.removeUnit(unit,player);
+    }
 
 
 

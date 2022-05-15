@@ -11,33 +11,44 @@ public class Player {
     ArrayList<Unit> units = new ArrayList<>();
     ArrayList<Hex> visibleHexes = new ArrayList<>();
     ArrayList<LuxuryResources> achievedLuxuryResources = new ArrayList<>();
-
+    ArrayList<City> cities=new ArrayList<>();
 
     public Player(String name, User user) {
         this.name = name;
         this.user = user;
     }
 
+    public void setCity(City city) {
+      cities.add(city);
+    }
 
     public void setUnits(Unit unit) {
         units.add(unit);
     }
 
-    public ArrayList<Unit> getUnits() {
+    public ArrayList<Unit> getAllUnits() {
         return units;
     }
 
-    public boolean isHexVisible(Hex hex) {
-        if (visibleHexes.contains(hex)) return true;
-        return false;
+   public  boolean isHexVisible(Hex hex)
+   {
+       if (visibleHexes.contains(hex))
+           return true;
+       return false;
+   }
+
+   public void addVisibleHex(Hex hex)
+   {
+       visibleHexes.add(hex);
+   }
+
+
+
+    public ArrayList<City> getCities() {
+        return cities;
     }
 
-    public void addVisibleHex(Hex hex) {
-        visibleHexes.add(hex);
-    }
-
-
-    public void removeUnit(Unit unit) {
+    public void removeUnit(Unit unit){
         units.remove(unit);
     }
 

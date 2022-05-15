@@ -10,7 +10,7 @@ public class Unit {
     private double HP;
     private int MP;
     private boolean isSleep;
-    private boolean isAlert;
+    private int combatStrength ;
 
     public Unit(UnitsFeatures unitType, Hex positionByHex, Player owner){
         this.unitType=unitType;
@@ -18,6 +18,7 @@ public class Unit {
         this.owner=owner;
         this.HP=10;
         this.MP=unitType.getMP();
+        this.combatStrength=unitType.getCombatStrength();
 
         owner.setUnits(this);
     }
@@ -58,11 +59,18 @@ public class Unit {
         playerHasUnit.removeUnit(removeUnit);
     }
 
+    public void setSleep(boolean sleep) {this.isSleep=sleep;}
 
+    public boolean getIsSleep() { return isSleep;}
 
+    public int getCombatStrength() {
+        return combatStrength;
+    }
 
+    public void setCombatStrength(int combatStrength) {this.combatStrength = combatStrength;}
 
-
-
+    public void buildCity(Unit unit,City city){
+        unit.getOwner().setCity(city);
+    }
 
 }
