@@ -49,7 +49,7 @@ public class Database {
         map.add(hex20 = new Hex(HexTypes.TUNDRA, 2, 0, StrategicResources.HORSE, null, BonusResources.GAZELLE));
         addFeatureToHex(hex20, LandFeatureType.JUNGLE);
 
-        map.add(hex21 = new Hex(HexTypes.PLAIN, 2, 1, null, LuxuryResources.FUMIGATION, BonusResources.SHEEP));
+        map.add(hex21 = new Hex(HexTypes.PLAIN, 2, 1, null, LuxuryResources.INCENSE, BonusResources.SHEEP));
         addFeatureToHex(hex21, LandFeatureType.JUNGLE);
 
         map.add(hex22 = new Hex(HexTypes.PLAIN, 2, 2, StrategicResources.HORSE, LuxuryResources.TUSK, null));

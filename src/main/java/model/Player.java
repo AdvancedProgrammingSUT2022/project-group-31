@@ -1,5 +1,7 @@
 package model;
 
+import Enums.Types.LuxuryResources;
+
 import java.util.ArrayList;
 
 public class Player {
@@ -8,6 +10,8 @@ public class Player {
     String name;
     ArrayList<Unit> units = new ArrayList<>();
     ArrayList<Hex> visibleHexes = new ArrayList<>();
+    ArrayList<LuxuryResources> achievedLuxuryResources = new ArrayList<>();
+
 
     public Player(String name, User user) {
         this.name = name;
@@ -40,5 +44,16 @@ public class Player {
     @Override
     public String toString() {
         return user.getNickname();
+    }
+
+    public boolean isLuxuryResourceFirstAchievement(LuxuryResources luxuryResources) {
+        if (achievedLuxuryResources.contains(luxuryResources))
+            return false;
+
+        return true;
+    }
+
+    public void addLuxuryResource(LuxuryResources luxuryResources) {
+        achievedLuxuryResources.add(luxuryResources);
     }
 }

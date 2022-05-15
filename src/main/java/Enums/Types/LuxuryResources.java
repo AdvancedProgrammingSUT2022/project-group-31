@@ -6,7 +6,7 @@ public enum LuxuryResources {
     FUR("Fur", 0, 0, 2, ImprovementTypes.FARMING),
     GEMSTONE("GemStone", 0, 0, 3, ImprovementTypes.MINE),
     GOLD("Gold", 0, 0, 2, ImprovementTypes.MINE),
-    FUMIGATION("Fumigation", 0, 0, 2, ImprovementTypes.FARMING),
+    INCENSE("Fumigation", 0, 0, 2, ImprovementTypes.FARMING),
     TUSK("Tusk", 0, 0, 2, ImprovementTypes.CAMP),
     MARBLE("Marble", 0, 0, 2, ImprovementTypes.STONE_MINE),
     SILK("Silk", 0, 0, 2, ImprovementTypes.FARMING),
@@ -55,6 +55,6 @@ public enum LuxuryResources {
 
     @Override
     public String toString() {
-        return name ;
+        return name;
     }
 }
