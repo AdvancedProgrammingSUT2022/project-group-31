@@ -23,15 +23,24 @@ public class Player {
     }
 
     public void setCity(City city) {
-        cities.add(city);
+      cities.add(city);
     }
 
     public void setUnits(Unit unit) {
         units.add(unit);
     }
 
+    public ArrayList<Unit> getUnits() {
+        return units;
+    }
+
     public ArrayList<Unit> getAllUnits() {
         return units;
+    }
+
+<<<<<<<<< Temporary merge branch 1
+    public ArrayList<City> getCities() {
+        return cities;
     }
 
     public boolean isHexVisible(Hex hex) {
@@ -48,10 +57,6 @@ public class Player {
     }
 
 
-    public ArrayList<City> getCities() {
-        return cities;
-    }
-
     public void removeUnit(Unit unit) {
         units.remove(unit);
     }
@@ -62,7 +67,8 @@ public class Player {
     }
 
     public boolean isLuxuryResourceFirstAchievement(LuxuryResources luxuryResources) {
-        if (achievedLuxuryResources.contains(luxuryResources)) return false;
+        if (achievedLuxuryResources.contains(luxuryResources))
+            return false;
 
         return true;
     }
