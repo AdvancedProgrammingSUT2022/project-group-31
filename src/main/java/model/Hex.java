@@ -34,6 +34,33 @@ public class Hex {
     private City city = null;
     private ArrayList<Hex> hexes=new ArrayList<>();
 
+    public String getFullName() {
+        return fullName;
+    }
+
+    public HexTypes getHexTypes() {
+        return hexTypes;
+    }
+
+    public LandFeatureType getLandFeatureType() {
+        return landFeatureType;
+    }
+
+    public boolean isHasRoad() {
+        return hasRoad;
+    }
+
+    public BonusResources getBonusResources() {
+        return bonusResources;
+    }
+
+    public LuxuryResources getLuxuryResources() {
+        return luxuryResources;
+    }
+
+    public StrategicResources getStrategicResources() {
+        return strategicResources;
+    }
 
     public Hex(HexTypes hexTypes, int x, int y, StrategicResources strategicResources, LuxuryResources luxuryResources, BonusResources bonusResources) {
 

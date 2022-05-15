@@ -1,11 +1,12 @@
 package Enums.Types;
 
 public enum StrategicResources {
-    COAL(0, 1, 0, Technology.MINING, ImprovementTypes.MINE),
-    HORSE(0, 1, 0, Technology.ANIMAL_HUSBANDRY, ImprovementTypes.PASTURE),
-    IRON(0, 1, 0, Technology.METALLURGY, ImprovementTypes.MINE);
+    COAL("Coal", 0, 1, 0, Technology.MINING, ImprovementTypes.MINE),
+    HORSE("Horse", 0, 1, 0, Technology.ANIMAL_HUSBANDRY, ImprovementTypes.PASTURE),
+    IRON("Iron", 0, 1, 0, Technology.METALLURGY, ImprovementTypes.MINE);
 
-    StrategicResources(int food, int production, int gold, Technology neededTechnology, ImprovementTypes neededImprovement) {
+    StrategicResources(String name, int food, int production, int gold, Technology neededTechnology, ImprovementTypes neededImprovement) {
+        this.name = name;
         this.food = food;
         this.production = production;
         this.gold = gold;
@@ -16,6 +17,7 @@ public enum StrategicResources {
     private final int food;
     private final int production;
     private final int gold;
+    private final String name;
     private final Technology neededTechnology;
     private final ImprovementTypes neededImprovement;
 
@@ -37,5 +39,15 @@ public enum StrategicResources {
 
     public ImprovementTypes getNeededImprovement() {
         return neededImprovement;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+
+    @Override
+    public String toString() {
+        return name;
     }
 }

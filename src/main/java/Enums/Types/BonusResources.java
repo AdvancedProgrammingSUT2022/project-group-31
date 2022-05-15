@@ -1,13 +1,15 @@
 package Enums.Types;
 
 public enum BonusResources {
-    BANANA(1, 0, 0, ImprovementTypes.FARMING),
-    COW(1, 0, 0, ImprovementTypes.PASTURE),
-    GAZELLE(1, 0, 0, ImprovementTypes.CAMP),
-    SHEEP(2, 0, 0, ImprovementTypes.PASTURE),
-    WHEAT(1, 0, 0, ImprovementTypes.FARM);
+    BANANA("Banana", 1, 0, 0, ImprovementTypes.FARMING),
+    COW("Cow", 1, 0, 0, ImprovementTypes.PASTURE),
+    GAZELLE("Gazelle", 1, 0, 0, ImprovementTypes.CAMP),
+    SHEEP("Sheep", 2, 0, 0, ImprovementTypes.PASTURE),
+    WHEAT("Wheat", 1, 0, 0, ImprovementTypes.FARM);
 
-    BonusResources(int food, int production, int gold, ImprovementTypes neededImprovement) {
+
+    BonusResources(String name, int food, int production, int gold, ImprovementTypes neededImprovement) {
+        this.name = name;
         this.food = food;
         this.gold = gold;
         this.neededImprovement = neededImprovement;
@@ -17,6 +19,7 @@ public enum BonusResources {
     private final int food;
     private final int production;
     private final int gold;
+    private final String name;
     private final ImprovementTypes neededImprovement;
 
     public int getFood() {
@@ -33,5 +36,14 @@ public enum BonusResources {
 
     public ImprovementTypes getNeededImprovement() {
         return neededImprovement;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    @Override
+    public String toString() {
+        return name;
     }
 }
