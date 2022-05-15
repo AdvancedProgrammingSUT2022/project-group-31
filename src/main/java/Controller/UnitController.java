@@ -1,6 +1,7 @@
 package Controller;
 
 import Enums.Types.CombatType;
+import Enums.Types.HexTypes;
 import model.City;
 import model.Hex;
 import model.Player;
@@ -12,10 +13,13 @@ public class UnitController {
 
 
     ///////////////////////////////
-    //TODO hesab kardan river
+    //TODO hesab kardan river and road
     public String move(Unit unit, Hex destination) {
 
+        Hex origin=unit.getPositionByHex();
+
        if (isMovePossible(unit,destination)){
+
            unit.setPositionByHex(destination);
            return "move is done";
        }
@@ -39,6 +43,12 @@ public class UnitController {
         if (unit.getMP()!=0){
             if (unit.getUnitType().getCombatType()==CombatType.CIVILIAN){
                 if (destination.getUnMilitaryUnit()==null){
+                    if (destination.getHexTypes()==HexTypes.OCEAN || destination.getHexTypes()==HexTypes.MOUNTAIN){
+                        unit.setMP(0);
+                    }
+                    if (destination.getHexTypes()==HexTypes.HILL){
+                        unit.setMP(unit.getMP()-1);
+                    }
                     if (distance > unit.getMP()){
                         return false;
                     }else {
