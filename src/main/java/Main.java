@@ -7,11 +7,11 @@ import view.PrintSingleHex;
 public class Main {
     public static void main(String[] args) {
 
-        //   PrintMap printMap = new PrintMap();
+           PrintMap printMap = new PrintMap();
         PrintSingleHex printSingleHex = new PrintSingleHex();
-        //   printMap.run();
+          printMap.run();
         //  System.out.println("\n\n\n\n\n\n");
-        printSingleHex.run();
+    //    printSingleHex.run();
         //  iAddTechnology addTechnology =  new AddTechnology();
         //   addTechnology.run();
 //

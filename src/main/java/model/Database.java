@@ -20,7 +20,7 @@ public class Database {
         addFeatureToHex(hex02, LandFeatureType.JUNGLE);
 
         map.add(hex03 = new Hex(HexTypes.SNOW, 0, 3, null, null, null));
-        addFeatureToHex(hex04, null);
+     //   addFeatureToHex(hex04, null);
 
         map.add(hex04 = new Hex(HexTypes.TUNDRA, 0, 4, StrategicResources.HORSE, LuxuryResources.FUR, BonusResources.GAZELLE));
         addFeatureToHex(hex04, LandFeatureType.JUNGLE);
@@ -32,19 +32,19 @@ public class Database {
         addFeatureToHex(hex10, LandFeatureType.LAGOON);
 
         map.add(hex11 = new Hex(HexTypes.OCEAN, 1, 1, null, null, null));
-        addFeatureToHex(hex11, null);
+//        addFeatureToHex(hex11, null);
 
         map.add(hex12 = new Hex(HexTypes.HILL, 1, 2, StrategicResources.IRON, LuxuryResources.GOLD, BonusResources.SHEEP));
         addFeatureToHex(hex12, LandFeatureType.MASSIVE_FOREST);
 
         map.add(hex13 = new Hex(HexTypes.MOUNTAIN, 1, 3, null, null, null));
-        addFeatureToHex(hex12, null);
+ //       addFeatureToHex(hex12, null);
 
         map.add(hex14 = new Hex(HexTypes.PLAIN, 1, 4, StrategicResources.COAL, null, BonusResources.SHEEP));
         addFeatureToHex(hex14, LandFeatureType.MASSIVE_FOREST);
 
         map.add(hex15 = new Hex(HexTypes.SNOW, 1, 5, null, null, null));
-        addFeatureToHex(hex15, null);
+ //       addFeatureToHex(hex15, null);
 
         map.add(hex20 = new Hex(HexTypes.TUNDRA, 2, 0, StrategicResources.HORSE, null, BonusResources.GAZELLE));
         addFeatureToHex(hex20, LandFeatureType.JUNGLE);
@@ -62,7 +62,7 @@ public class Database {
         addFeatureToHex(hex24, LandFeatureType.JUNGLE);
 
         map.add(hex25 = new Hex(HexTypes.SNOW, 2, 5, null, null, null));
-        addFeatureToHex(hex25, null);
+      //  addFeatureToHex(hex25, null);
 
 
         allTechnologies.add(Technology.AGRICULTURE);

@@ -149,8 +149,7 @@ public class Hex {
         this.production += landFeatureType.getProduction();
         this.gold += landFeatureType.getGold();
         this.battleEfficiency += landFeatureType.getBattleEfficacy();
-        if (this.MP == -1 || landFeatureType.getMP() == -1)
-            this.MP = -1;
+        if (this.MP == -1 || landFeatureType.getMP() == -1) this.MP = -1;
         else this.MP = this.MP + landFeatureType.getMP();
         if (this.MP >= 2) this.MP = 2;
     }
@@ -299,6 +298,10 @@ public class Hex {
             }
         }
         return null;
+    }
+
+    public void deleteImprovement() {
+        improvement = null;
     }
 
 }
