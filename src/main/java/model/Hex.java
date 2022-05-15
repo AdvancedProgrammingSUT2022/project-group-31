@@ -9,7 +9,7 @@ public class Hex {
     private String shortName;
     private String fullName;
     private HexTypes hexTypes;
-    private LandFeatureType landFeatureType;
+    private LandFeatureType landFeatureType = null;
     private int x;
     private int y;
     private int MP;
@@ -32,7 +32,7 @@ public class Hex {
     private LuxuryResources luxuryResources = null;
     private StrategicResources strategicResources = null;
     private City city = null;
-    private ArrayList<Hex> hexes=new ArrayList<>();
+    private ArrayList<Hex> hexes = new ArrayList<>();
 
     public String getFullName() {
         return fullName;
@@ -46,7 +46,7 @@ public class Hex {
         return landFeatureType;
     }
 
-    public boolean isHasRoad() {
+    public boolean isRoadOnHex() {
         return hasRoad;
     }
 
@@ -64,7 +64,7 @@ public class Hex {
 
     public Hex(HexTypes hexTypes, int x, int y, StrategicResources strategicResources, LuxuryResources luxuryResources, BonusResources bonusResources) {
 
-
+        this.hexTypes = hexTypes;
         this.x = x;
         this.y = y;
         this.luxuryResources = luxuryResources;
@@ -149,7 +149,10 @@ public class Hex {
         this.production += landFeatureType.getProduction();
         this.gold += landFeatureType.getGold();
         this.battleEfficiency += landFeatureType.getBattleEfficacy();
-        //  this.MP
+        if (this.MP == -1 || landFeatureType.getMP() == -1)
+            this.MP = -1;
+        else this.MP = this.MP + landFeatureType.getMP();
+        if (this.MP >= 2) this.MP = 2;
     }
 
     public void setX(int x) {
@@ -160,8 +163,12 @@ public class Hex {
         this.y = y;
     }
 
-    public void setHasRoad(boolean hasRoad) {
-        this.hasRoad = hasRoad;
+    public void setRoad() {
+        hasRoad = true;
+    }
+
+    public void deleteRoad() {
+        hasRoad = false;
     }
 
     public void setBonusResources(BonusResources bonusResources) {
@@ -248,6 +255,11 @@ public class Hex {
         this.improvement = improvement;
     }
 
+    public void removeImprovement(Improvement improvement) {
+        this.improvement = null;
+        //TODO turns
+    }
+
     public void setOwner(User owner) {
         this.owner = owner;
     }
@@ -280,13 +292,13 @@ public class Hex {
         return y;
     }
 
-    public Hex getHexByXandY(int x, int y) {
+    public Hex getHexByPosition(int x, int y) {
         for (Hex hex : hexes) {
             if (hex.getX() == x && hex.getY() == y) {
                 return hex;
             }
         }
-    return null;
+        return null;
     }
 
 }

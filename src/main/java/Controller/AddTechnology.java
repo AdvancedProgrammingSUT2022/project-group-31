@@ -2,6 +2,7 @@ package Controller;
 
 import Enums.Types.Technology;
 import model.Database;
+import model.Player;
 import model.User;
 
 import java.util.ArrayList;
@@ -14,18 +15,13 @@ public class AddTechnology {
         //TODO  add turns
         Database database = Database.getInstance();
         ArrayList<Technology> allTechnologies = database.getAllTechnologies();
-
+        User user = new User("amoo", "lalala","bababa");
+        Player player = new Player("amin",user);
 
         Scanner scanner = new Scanner(System.in);
         String input = "YO";
-        User user = new User("amin", "tay", "mamamd");
-        user.addTechnology(Technology.AGRICULTURE);
-        user.addTechnology(Technology.ANIMAL_HUSBANDRY);
-        user.addTechnology(Technology.MATHEMATICS);
-        user.addTechnology(Technology.STEEL);
-        user.addTechnology(Technology.PHYSICS);
         //    user.addTechnology(Technology.MINING);
-        ArrayList<Technology> achievedTechnologies = user.getAchievedTechnologies();
+        ArrayList<Technology> achievedTechnologies = player.getAchievedTechnologies();
         ArrayList<Technology> availableTechnologies = new ArrayList<>();
 
         boolean canBeShown = true;

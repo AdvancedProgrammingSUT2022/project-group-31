@@ -5,7 +5,7 @@ public enum ERA {
     CLASSICAL,
     MEDIEVAL,
     RENAISSANCE,
-    INDUSTRIAL
+    INDUSTRIAL,
 
 
 }

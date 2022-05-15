@@ -165,13 +165,13 @@ public class UnitController {
         int y=unit.getPositionByHex().getY();
 
         if (y%2==0){
-            if (hex.getHexByXandY(x-1,y).getMilitaryUnit()==null || hex.getHexByXandY(x+1,y).getMilitaryUnit()==null){
+            if (hex.getHexByPosition(x-1,y).getMilitaryUnit()==null || hex.getHexByPosition(x+1,y).getMilitaryUnit()==null){
                 unit.setSleep(true);
                 return "unit is on alert";
-            } else if (hex.getHexByXandY(x-1,y-1).getMilitaryUnit()==null || hex.getHexByXandY(x-1,y+1).getMilitaryUnit()==null){
+            } else if (hex.getHexByPosition(x-1,y-1).getMilitaryUnit()==null || hex.getHexByPosition(x-1,y+1).getMilitaryUnit()==null){
                unit.setSleep(true);
                 return "unit is on alert";
-            } else if (hex.getHexByXandY(x,y-1).getMilitaryUnit()==null || hex.getHexByXandY(x,y+1).getMilitaryUnit()==null){
+            } else if (hex.getHexByPosition(x,y-1).getMilitaryUnit()==null || hex.getHexByPosition(x,y+1).getMilitaryUnit()==null){
                 unit.setSleep(true);
                 return "unit is on alert";
             }else{
@@ -181,13 +181,13 @@ public class UnitController {
 
         }else{
 
-            if (hex.getHexByXandY(x-1,y).getMilitaryUnit()==null || hex.getHexByXandY(x+1,y).getMilitaryUnit()==null){
+            if (hex.getHexByPosition(x-1,y).getMilitaryUnit()==null || hex.getHexByPosition(x+1,y).getMilitaryUnit()==null){
                 unit.setSleep(true);
                 return "unit is on alert";
-            }else if (hex.getHexByXandY(x,y-1).getMilitaryUnit()==null || hex.getHexByXandY(x,y+1).getMilitaryUnit()==null){
+            }else if (hex.getHexByPosition(x,y-1).getMilitaryUnit()==null || hex.getHexByPosition(x,y+1).getMilitaryUnit()==null){
                 unit.setSleep(true);
                 return "unit is on alert";
-            }else if (hex.getHexByXandY(x+1,y-1).getMilitaryUnit()==null || hex.getHexByXandY(x-1,y+1).getMilitaryUnit()==null){
+            }else if (hex.getHexByPosition(x+1,y-1).getMilitaryUnit()==null || hex.getHexByPosition(x-1,y+1).getMilitaryUnit()==null){
                 unit.setSleep(true);
                 return "unit is on alert";
             }else{

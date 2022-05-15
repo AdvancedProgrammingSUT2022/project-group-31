@@ -1,7 +1,11 @@
 package Enums.Types;
 
 public enum LandFeatureType {
-    VALLEY("Valley", 2, 0, 0, -0.33, 1), JUNGLE("Jungle", 1, 1, 0, 0.25, 2), MASSIVE_FOREST("Massive Forest", 1, -1, 0, 0.25, 2), LAGOON("Lagoon", -1, 0, 0, -0.33, 2), OASIS("Oasis", 3, 0, 1, -0.33, 1);
+    VALLEY("Valley", 2, 0, 0, -0.33, 1),
+    JUNGLE("Jungle", 1, 1, 0, 0.25, 2),
+    MASSIVE_FOREST("Massive Forest", 1, -1, 0, 0.25, 2),
+    LAGOON("Lagoon", -1, 0, 0, -0.33, 2),
+    OASIS("Oasis", 3, 0, 1, -0.33, 1);
 
 
     private final int food;
@@ -10,7 +14,6 @@ public enum LandFeatureType {
     private final double battleEfficacy;
     private final int MP;
     private final String name;
-    private HexTypes[] canBeFindOn;
 
     LandFeatureType(String name, int food, int production, int gold, double battleEfficacy, int MP) {
         this.name = name;
@@ -47,7 +50,4 @@ public enum LandFeatureType {
         return MP;
     }
 
-    public HexTypes[] getCanBeFindOn() {
-        return canBeFindOn;
-    }
 }
