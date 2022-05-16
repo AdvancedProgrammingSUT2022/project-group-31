@@ -53,6 +53,12 @@ public class UserController {
     }
 
     public static void changeNickname(Matcher matcher, User user) {
+        String newNickname=matcher.group("newNickname");
+        if (user.getNickname().equals(newNickname)){
+            System.out.println("user with nickname <nickname> already exists");
+        }else{
+            user.setNickname(newNickname);
+        }
 
     }
 }

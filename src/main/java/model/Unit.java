@@ -2,22 +2,24 @@ package model;
 
 import Enums.Types.CombatType;
 import Enums.Types.UnitState;
+import Enums.Types.UnitsFeatures;
 
-public class Unitt {
+public class Unit {
     protected Hex position;
     protected Player owner;
+    protected UnitsFeatures unitsFeatures;
     protected int MP;
     protected String name;
     protected UnitState unitState;
     protected CombatType combatType;
 
-    public Unitt(Hex position, Player owner) {
+    public Unit(Hex position, Player owner) {
         this.position = position;
         this.owner = owner;
-        this.MP = unitType.getMP();
-        this.name = unitType.getName();
+        this.MP = unitsFeatures.getMP();
+        this.name = unitsFeatures.getName();
         this.unitState = UnitState.WAKE;
-        this.combatType = unitType.getCombatType();
+        this.combatType = unitsFeatures.getCombatType();
     }
 
     public void setUnitState(UnitState unitState) {

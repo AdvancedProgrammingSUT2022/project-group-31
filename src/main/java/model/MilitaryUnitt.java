@@ -2,7 +2,7 @@ package model;
 
 import Enums.Types.UnitsFeatures;
 
-public class MilitaryUnitt extends Unitt {
+public class MilitaryUnitt extends Unit {
 
     // TODO setller and worker monde...
     // TODO  extract super class...
