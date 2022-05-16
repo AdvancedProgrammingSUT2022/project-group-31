@@ -15,8 +15,8 @@ public class AddTechnology {
         //TODO  add turns
         Database database = Database.getInstance();
         ArrayList<Technology> allTechnologies = database.getAllTechnologies();
-        User user = new User("amoo", "lalala","bababa");
-        Player player = new Player("amin",user);
+        User user = new User("amoo", "lalala", "bababa");
+        Player player = new Player("amin", user);
 
         Scanner scanner = new Scanner(System.in);
         String input = "YO";

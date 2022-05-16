@@ -25,7 +25,7 @@ public class Hex {
     private boolean isRiverOnSouthWest;
     private boolean hasRoad = false;
     private UnMilitaryUnit unMilitaryUnit = null;
-    private MilitaryUnit militaryUnit = null;
+    private MilitaryUnitt militaryUnit = null;
     private Improvement improvement = null;
     private User owner = null;
     private BonusResources bonusResources = null;
@@ -246,7 +246,7 @@ public class Hex {
         this.unMilitaryUnit = unMilitaryUnit;
     }
 
-    public void setMilitaryUnit(MilitaryUnit militaryUnit) {
+    public void setMilitaryUnit(MilitaryUnitt militaryUnit) {
         this.militaryUnit = militaryUnit;
     }
 
@@ -271,7 +271,7 @@ public class Hex {
         return unMilitaryUnit;
     }
 
-    public MilitaryUnit getMilitaryUnit() {
+    public MilitaryUnitt getMilitaryUnit() {
         return militaryUnit;
     }
 

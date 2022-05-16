@@ -6,9 +6,9 @@ import model.Player;
 import model.User;
 
 public class PrintMap {
-    public static void run() {
-        Player player = new Player("ani", null);
-        Colors C = Colors.getInstance();
+    public static void run(Player player) {
+
+     //   Colors C = Colors.getInstance();
         Database database = Database.getInstance();
 
         //     String name =  C.BG_BLUE;
@@ -19,11 +19,8 @@ public class PrintMap {
         String RED = "\033[41m";
         String BLUE = "\033[44m";
         int n = 0;
-
-
-
-
-
+        System.out.println("\n\n\n");
+        System.out.println("   _____           _____           _____");
         //line 1
         System.out.print(player.isHexVisible(database.Hex00()) ? ("  /" + database.Hex00().getColor() + "     " + RESET + "\\" + "       ") : "  /     \\       "); //hex(0,0)
         System.out.print(player.isHexVisible(database.Hex02()) ? ("  /" + database.Hex02().getColor() + "     " + RESET + "\\" + "       ") : "  /     \\       "); //hex(0,2)
@@ -190,9 +187,9 @@ public class PrintMap {
         System.out.println();
 
         //line21
-        System.out.print(player.isHexVisible(database.Hex21()) ? ("          " + "\\" + database.Hex21().getColor() + "_____" + RESET + "/" + "         "):"          \\_____/         "); //hex(2,1)
-        System.out.print(player.isHexVisible(database.Hex23()) ? ("\\" + database.Hex23().getColor() + "_____" + RESET + "/" + "         "):"\\_____/         "); //hex(2,3)
-        System.out.print(player.isHexVisible(database.Hex25()) ? ("\\" + database.Hex25().getColor() + "_____" + RESET + BLUE + "/" + RESET):"\\_____/"); //hex(2,5)
+        System.out.print(player.isHexVisible(database.Hex21()) ? ("          " + "\\" + database.Hex21().getColor() + "_____" + RESET + "/" + "         ") : "          \\_____/         "); //hex(2,1)
+        System.out.print(player.isHexVisible(database.Hex23()) ? ("\\" + database.Hex23().getColor() + "_____" + RESET + "/" + "         ") : "\\_____/         "); //hex(2,3)
+        System.out.print(player.isHexVisible(database.Hex25()) ? ("\\" + database.Hex25().getColor() + "_____" + RESET + BLUE + "/" + RESET) : "\\_____/"); //hex(2,5)
         System.out.println();
 
     }

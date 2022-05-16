@@ -4,7 +4,8 @@ import java.util.ArrayList;
 
 public class City {
 
-    public City(boolean isCapital, boolean isMainCapital, int foodProduce, int productionProduce, int attackPower, int defencePower, int goldProduce) {
+    public City(Hex hex, boolean isCapital, boolean isMainCapital, int foodProduce, int productionProduce, int attackPower, int defencePower, int goldProduce) {
+        this.hex = hex;
         this.isCapital = isCapital;
         this.isMainCapital = isMainCapital;
         this.foodProduce = foodProduce;
@@ -12,6 +13,17 @@ public class City {
         this.attackPower = attackPower;
         this.defencePower = defencePower;
         this.goldProduce = goldProduce;
+        this.happiness = 10;
+    }
+
+    private Hex hex;
+
+    public void setHex(Hex hex) {
+        this.hex = hex;
+    }
+
+    public Hex getHex() {
+        return hex;
     }
 
     private boolean isCapital;
@@ -21,6 +33,7 @@ public class City {
     private int attackPower;
     private int defencePower;
     private int goldProduce;
+    private int happiness;
     private ArrayList<Building> buildings = new ArrayList<>();
 
 
@@ -38,6 +51,14 @@ public class City {
 
     public void setProductionProduce(int productionProduce) {
         this.productionProduce = productionProduce;
+    }
+
+    public int getHappiness() {
+        return happiness;
+    }
+
+    public void setHappiness(int happiness) {
+        this.happiness = happiness;
     }
 
     public void setAttackPower(int attackPower) {
@@ -86,5 +107,10 @@ public class City {
 
     public ArrayList<Building> getBuildings() {
         return buildings;
+    }
+
+    @Override
+    public String toString() {
+        return "Position: (" + hex.getX() + "," + hex.getY() + "), is Capital: " + isCapital + " Food Produce= " + foodProduce + ", Production= " + productionProduce + ", Attack Power= " + attackPower + ", Defence Power =" + defencePower + ", Gold Produce= " + goldProduce;
     }
 }

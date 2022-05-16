@@ -6,14 +6,16 @@ import Enums.Types.Technology;
 import java.util.ArrayList;
 
 public class Player {
+
+
     //TODO kamle nashode
-    User user;
-    String name;
+    private User user;
+    private String name;
     private int gold = 0;
-    ArrayList<Unit> units = new ArrayList<>();
-    ArrayList<Hex> visibleHexes = new ArrayList<>();
-    ArrayList<LuxuryResources> achievedLuxuryResources = new ArrayList<>();
-    ArrayList<City> cities = new ArrayList<>();
+    private ArrayList<MilitaryUnitt> units = new ArrayList<>();
+    private ArrayList<Hex> visibleHexes = new ArrayList<>();
+    private ArrayList<LuxuryResources> achievedLuxuryResources = new ArrayList<>();
+    private ArrayList<City> cities = new ArrayList<>();
     private ArrayList<Technology> achievedTechnologies = new ArrayList<>();
 
 
@@ -22,19 +24,71 @@ public class Player {
         this.user = user;
     }
 
-    public void setCity(City city) {
-      cities.add(city);
+    public User getUser() {
+        return user;
     }
 
-    public void setUnits(Unit unit) {
+    public String getName() {
+        return name;
+    }
+
+    public int getGold() {
+        return gold;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setGold(int gold) {
+        this.gold = gold;
+    }
+
+    public void setUnits(ArrayList<MilitaryUnitt> units) {
+        this.units = units;
+    }
+
+    public ArrayList<Hex> getVisibleHexes() {
+        return visibleHexes;
+    }
+
+    public void setVisibleHexes(ArrayList<Hex> visibleHexes) {
+        this.visibleHexes = visibleHexes;
+    }
+
+    public ArrayList<LuxuryResources> getAchievedLuxuryResources() {
+        return achievedLuxuryResources;
+    }
+
+    public void setAchievedLuxuryResources(ArrayList<LuxuryResources> achievedLuxuryResources) {
+        this.achievedLuxuryResources = achievedLuxuryResources;
+    }
+
+    public void setCities(ArrayList<City> cities) {
+        this.cities = cities;
+    }
+
+    public void setAchievedTechnologies(ArrayList<Technology> achievedTechnologies) {
+        this.achievedTechnologies = achievedTechnologies;
+    }
+
+    public void addCity(City city) {
+        cities.add(city);
+    }
+
+    public void addUnit(MilitaryUnitt unit) {
         units.add(unit);
     }
 
-    public ArrayList<Unit> getUnits() {
+    public ArrayList<MilitaryUnitt> getUnits() {
         return units;
     }
 
-    public ArrayList<Unit> getAllUnits() {
+    public ArrayList<MilitaryUnitt> getAllUnits() {
         return units;
     }
 
@@ -57,7 +111,7 @@ public class Player {
     }
 
 
-    public void removeUnit(Unit unit) {
+    public void removeUnit(MilitaryUnitt unit) {
         units.remove(unit);
     }
 
