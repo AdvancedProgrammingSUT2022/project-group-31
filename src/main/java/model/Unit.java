@@ -7,6 +7,7 @@ import Enums.Types.UnitsFeatures;
 public class Unit {
     protected Hex position;
     protected Player owner;
+    protected UnitsFeatures unitsFeatures;
     protected int MP;
     protected String name;
     protected UnitState unitState;
@@ -16,10 +17,10 @@ public class Unit {
     public Unit(Hex position, Player owner) {
         this.position = position;
         this.owner = owner;
-        this.MP = unitType.getMP();
-        this.name = unitType.getName();
+        this.MP = unitsFeatures.getMP();
+        this.name = unitsFeatures.getName();
         this.unitState = UnitState.WAKE;
-        this.combatType = unitType.getCombatType();
+        this.combatType = unitsFeatures.getCombatType();
     }
 
     public void setUnitState(UnitState unitState) {
