@@ -2,13 +2,11 @@ package Controller;
 
 import Enums.Types.CombatType;
 import Enums.Types.HexTypes;
-import model.City;
-import model.Hex;
-import model.Player;
-import model.MilitaryUnitt;
+import model.*;
 
 public class UnitController {
 
+    Database database = Database.getInstance();
 
     ///////////////////////////////
     //TODO hesab kardan river and road
@@ -171,13 +169,13 @@ public class UnitController {
         int y = unit.getPosition().getY();
 
         if (y % 2 == 0) {
-            if (hex.getHexByPosition(x - 1, y).getMilitaryUnit() == null || hex.getHexByPosition(x + 1, y).getMilitaryUnit() == null) {
+            if (database.getHexByPosition(x - 1, y).getMilitaryUnit() == null || database.getHexByPosition(x + 1, y).getMilitaryUnit() == null) {
                 unit.setSleep(true);
                 return "unit is on alert";
-            } else if (hex.getHexByPosition(x - 1, y - 1).getMilitaryUnit() == null || hex.getHexByPosition(x - 1, y + 1).getMilitaryUnit() == null) {
+            } else if (database.getHexByPosition(x - 1, y - 1).getMilitaryUnit() == null || database.getHexByPosition(x - 1, y + 1).getMilitaryUnit() == null) {
                 unit.setSleep(true);
                 return "unit is on alert";
-            } else if (hex.getHexByPosition(x, y - 1).getMilitaryUnit() == null || hex.getHexByPosition(x, y + 1).getMilitaryUnit() == null) {
+            } else if (database.getHexByPosition(x, y - 1).getMilitaryUnit() == null || database.getHexByPosition(x, y + 1).getMilitaryUnit() == null) {
                 unit.setSleep(true);
                 return "unit is on alert";
             } else {
@@ -187,13 +185,13 @@ public class UnitController {
 
         } else {
 
-            if (hex.getHexByPosition(x - 1, y).getMilitaryUnit() == null || hex.getHexByPosition(x + 1, y).getMilitaryUnit() == null) {
+            if (database.getHexByPosition(x - 1, y).getMilitaryUnit() == null || database.getHexByPosition(x + 1, y).getMilitaryUnit() == null) {
                 unit.setSleep(true);
                 return "unit is on alert";
-            } else if (hex.getHexByPosition(x, y - 1).getMilitaryUnit() == null || hex.getHexByPosition(x, y + 1).getMilitaryUnit() == null) {
+            } else if (database.getHexByPosition(x, y - 1).getMilitaryUnit() == null || database.getHexByPosition(x, y + 1).getMilitaryUnit() == null) {
                 unit.setSleep(true);
                 return "unit is on alert";
-            } else if (hex.getHexByPosition(x + 1, y - 1).getMilitaryUnit() == null || hex.getHexByPosition(x - 1, y + 1).getMilitaryUnit() == null) {
+            } else if (database.getHexByPosition(x + 1, y - 1).getMilitaryUnit() == null || database.getHexByPosition(x - 1, y + 1).getMilitaryUnit() == null) {
                 unit.setSleep(true);
                 return "unit is on alert";
             } else {

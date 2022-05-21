@@ -32,7 +32,7 @@ public class Hex {
     private LuxuryResources luxuryResources = null;
     private StrategicResources strategicResources = null;
     private City city = null;
-    private ArrayList<Hex> hexes = new ArrayList<>();
+    //private ArrayList<Hex> hexes = new ArrayList<>();
 
     public String getFullName() {
         return fullName;
@@ -78,7 +78,7 @@ public class Hex {
         this.MP = hexTypes.getMP();
         this.color = hexTypes.getColor();
         this.fullName = hexTypes.getFullName();
-        hexes.add(this);
+    //    hexes.add(this);
 
     }
 
@@ -291,14 +291,22 @@ public class Hex {
         return y;
     }
 
-    public Hex getHexByPosition(int x, int y) {
-        for (Hex hex : hexes) {
-            if (hex.getX() == x && hex.getY() == y) {
-                return hex;
-            }
-        }
-        return null;
+    public void setFullName(String fullName) {
+        this.fullName = fullName;
     }
+
+    public void setHexTypes(HexTypes hexTypes) {
+        this.hexTypes = hexTypes;
+    }
+
+    public boolean isHasRoad() {
+        return hasRoad;
+    }
+
+    public void setHasRoad(boolean hasRoad) {
+        this.hasRoad = hasRoad;
+    }
+
 
     public void deleteImprovement() {
         improvement = null;
