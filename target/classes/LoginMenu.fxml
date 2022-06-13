@@ -1,14 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
-
-<AnchorPane xmlns="http://javafx.com/javafx"
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.*?>
+<BorderPane xmlns="http://javafx.com/javafx"
             xmlns:fx="http://javafx.com/fxml"
-            fx:controller="civ.Controller.LoginCTR"
-            prefHeight="400.0" prefWidth="600.0">
+            fx:controller="civ.Controller.LoginController"
+            prefHeight="350.0" prefWidth="400.0">
+    <center>
 
-</AnchorPane>
+        <VBox spacing="5" alignment="TOP_CENTER" styleClass="entireScreen">
+            <Text text=""/>
+            <Text id="title" text="Cup Head!" styleClass="title"/>
+            <Text text=""/>
+
+
+            <Label text="Username"/>
+            <TextField fx:id="username" promptText="enter your username..." styleClass="loginMenuTextFields"/>
+            <Label text="Password"/>
+            <TextField fx:id="password" promptText="enter your password..." styleClass="loginMenuTextFields"/>
+            <Text text=""/>
+            <Text></Text>
+            <Button fx:id="loginButton" styleClass="loginButton" text="Login" onMouseClicked="#login" onMouseEntered="#toBatman" onMouseExited="#outBatman"/>
+            <Button fx:id="registerButton" styleClass="registerButton" text="Register" onMouseClicked="#register"/>
+
+
+            <Text fx:id="stateText" text="" styleClass="infoText"/>
+
+
+        </VBox>
+    </center>
+
+</BorderPane>

@@ -13,47 +13,15 @@ import java.net.URL;
 public class Main extends Application {
 
 
-    private static Scene scene;
+    public static Scene scene;
 
     public static void main(String[] args) {
-        launch(args);
-    }
-
-    boolean isFounded() {
-
-        return false;
-    }
-
-    public static void changeMenu(String name) {
-        Parent root = loadFXMNL(name);
-        Main.scene.setRoot(root);
-
-    }
-
-    public static Parent loadFXMNL(String name) {
-        try {
-//
-            URL address = new URL(Main.class.getResource("/" + name).toExternalForm());
-            return FXMLLoader.load(address);
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
-    }
-
-    @Override
-    public void start(Stage stage) throws Exception {
-        Parent root = loadFXMNL("LoginMenu.fxml");
-        Scene scene = new Scene(root);
-        Main.scene = this.scene;
-
-        stage.setScene(scene);
-        stage.show();
-
-    }
-}
+        //launch(args);
 
 
-//        PrintMap printMap = new PrintMap();
+
+
+        //        PrintMap printMap = new PrintMap();
 //        PrintSingleHex printSingleHex = new PrintSingleHex();
 //        AllUnitsMenu unitsMenu = new AllUnitsMenu();
 //        SelectUnitMenu selectUnitMenu = new SelectUnitMenu();
@@ -87,3 +55,41 @@ public class Main extends Application {
 //  iAddTechnology addTechnology =  new AddTechnology();
 //   addTechnology.run();
 //LoginMenu.run();
+
+
+    }
+
+    boolean isFounded() {
+
+        return false;
+    }
+
+    public static void changeMenu(String name) {
+        Parent root = loadFXMNL(name);
+        Main.scene.setRoot(root);
+
+    }
+
+    public static Parent loadFXMNL(String name) {
+        try {
+//
+            URL address = new URL(Main.class.getResource("/" + name).toExternalForm());
+            return FXMLLoader.load(address);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    @Override
+    public void start(Stage stage) throws Exception {
+        Parent root = loadFXMNL("LoginMenu.fxml");
+        Scene scene = new Scene(root);
+        Main.scene = scene;
+
+        stage.setScene(scene);
+        stage.show();
+
+    }
+}
+
+
